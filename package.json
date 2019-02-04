@@ -1,0 +1,19 @@
+{
+  "name": "cse170prjct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CognitoErgoSum/cse170prjct.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CognitoErgoSum/cse170prjct/issues"
+  },
+  "homepage": "https://github.com/CognitoErgoSum/cse170prjct#readme"
+}
