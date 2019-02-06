@@ -1,19 +1,25 @@
 {
-  "name": "cse170prjct",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "IntroHCI",
+  "version": "0.0.1",
+  "author": "Intro HCI Staff",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IntroHCI/lab4"
+  },
+  "license": "MIT",
+
+  "private": true,
   "scripts": {
     "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CognitoErgoSum/cse170prjct.git"
+  "dependencies": {
+    "express": "3.x",
+    "express3-handlebars": "*",
+    "mongodb": "*",
+    "mongoose": "*"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CognitoErgoSum/cse170prjct/issues"
-  },
-  "homepage": "https://github.com/CognitoErgoSum/cse170prjct#readme"
+  "engines": {
+    "node": "8.9.x"
+  }  
 }
