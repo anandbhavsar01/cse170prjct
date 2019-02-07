@@ -12,7 +12,7 @@
 			<header>
 				<h1>Category Search</h1>
 			</header>
-			<form action="/search">
+			<form role="form" method="get" action="/search">
 				<label>Search: </label>
 				<input class="entry" type="text" id="entry" name="entry"> <br>
 				<a class="suggested" href="#">Suggested Content</a>
@@ -22,7 +22,7 @@
 						{{#each categories}}
 						<tr>
 							{{#each group}}
-							<td> <input class="selectCategory" type="button" value="{{name}}"> </td>
+							<td> <input class="selectCategory" id="category" name="category" type="button" value="{{name}}" onclick="selectCategory"> </td>
 							{{/each}}
 						</tr>
 						{{/each}}
