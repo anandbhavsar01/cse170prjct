@@ -6,6 +6,13 @@
 		<link href="../css/bootstrap-theme.css" rel="stylesheet">
 		<link href="../css/bootstrap.css" rel="stylesheet">
 		<link href="../css/index.css" rel="stylesheet">
+		<script>
+			function selectCategory(e){
+				localStorage.setItem("selectedCategory", e.value);
+				console.log(localStorage.getItem("selectedCategory"));
+			}
+		</script>
+
 	</head>
 	<body>
 		<div class="container">
@@ -22,7 +29,7 @@
 						{{#each categories}}
 						<tr>
 							{{#each group}}
-							<td> <input class="selectCategory" id="category" name="category" type="button" value="{{name}}" onclick="selectCategory"> </td>
+							<td> <input class="selectCategory" id="category" name="category" type="button" value="{{name}}" onclick="selectCategory(this)"> </td>
 							{{/each}}
 						</tr>
 						{{/each}}

@@ -1,7 +1,8 @@
 exports.postQuery = function(request, response){
     var newQuery = {
         "entry" : request.query.entry,
-        "category" : request.query.category,
+        "category" : localStorage.getItem("selectedCategory")
     };
-    console.log(newQuery);
+    console.log(localStorage.getItem("selectedCategory"));
+    response.render('results', newQuery);
 }
