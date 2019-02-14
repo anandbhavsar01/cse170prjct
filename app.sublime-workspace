@@ -1,0 +1,242 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pro",
+				"projectURL"
+			],
+			[
+				"id",
+				"id"
+			],
+			[
+				"det",
+				"detailCallback"
+			],
+			[
+				"proje",
+				"projectID"
+			],
+			[
+				"d",
+				"details"
+			],
+			[
+				"add",
+				"addProjectDetails"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"name",
+				"nameToShow"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"margin",
+				"margin-left\tproperty"
+			],
+			[
+				"backg",
+				"background-color\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/charbeldouaihy/cse170prjct/views/resultPage.handlebars",
+		"/Users/charbeldouaihy/lab6/public/js/introHCI.js",
+		"/Users/charbeldouaihy/lab6/public/js/facebook.js",
+		"/Users/charbeldouaihy/lab6/projects.json",
+		"/Users/charbeldouaihy/lab6/views/index.handlebars",
+		"/Users/charbeldouaihy/lab6/app.js",
+		"/Users/charbeldouaihy/lab6/package.json",
+		"/Users/charbeldouaihy/lab6/views/partials/facebook.handlebars",
+		"/Users/charbeldouaihy/lab5/app.js",
+		"/Users/charbeldouaihy/lab5/routes/add.js",
+		"/Users/charbeldouaihy/lab5/views/index.handlebars",
+		"/Users/charbeldouaihy/lab5/data.json",
+		"/Users/charbeldouaihy/lab5/routes/index.js",
+		"/Users/charbeldouaihy/Desktop/index.js",
+		"/Users/charbeldouaihy/lab5/public/css/hci-friends.css",
+		"/Users/charbeldouaihy/lab5/public/js/hci-friends.js",
+		"/Users/charbeldouaihy/lab4/routes/index.js",
+		"/Users/charbeldouaihy/lab4/views/project.handlebars",
+		"/Users/charbeldouaihy/lab4/routes/project.js",
+		"/Users/charbeldouaihy/lab4/app.js",
+		"/Users/charbeldouaihy/lab4/views/index.handlebars",
+		"/Users/charbeldouaihy/lab3/hello/views/index.handlebars",
+		"/Users/charbeldouaihy/lab3/hello/routes/hello.js",
+		"/Users/charbeldouaihy/lab3/static/js/introHCI.js",
+		"/Users/charbeldouaihy/lab3/static/css/introHCI.css",
+		"/Users/charbeldouaihy/lab3/static/index.html",
+		"/Users/charbeldouaihy/lab2/static/js/introHCI.js",
+		"/Users/charbeldouaihy/lab2/static/index.html",
+		"/Users/charbeldouaihy/Desktop/hw1-linux_osx/Transform.cpp",
+		"/Users/charbeldouaihy/lab2/static/test.html",
+		"/Users/charbeldouaihy/lab2/static/css/introHCI.css",
+		"/Users/charbeldouaihy/lab1/static/css/introHCI.css",
+		"/Users/charbeldouaihy/lab1/static/index.html",
+		"/Users/charbeldouaihy/Desktop/app.js"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "app.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
