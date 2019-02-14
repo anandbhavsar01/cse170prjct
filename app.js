@@ -11,7 +11,8 @@ var handlebars = require('express3-handlebars')
 var login = require('./routes/login');
 var index = require('./routes/index');
 var search = require('./routes/search');
-var suggested = require('./routes/suggested')
+var suggested = require('./routes/suggested');
+var results = require('./routes/getResult')
 // var result = require ('./routes/getResult');
 
 // Example route
@@ -43,6 +44,7 @@ app.get('/', login.view);
 app.get('/login', index.view);
 app.get('/search', search.postQuery);
 app.get('/suggested', suggested.getSuggested);
+app.get('/results', results.getResult);
 // app.get('/getResult', result.getResult);
 // Example route
 // app.get('/users', user.list);
