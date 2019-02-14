@@ -1,3 +1,3 @@
-exports.getSuggested = function(){
-    render('suggested');
+exports.getSuggested = function(req, res){
+    res.render('suggested');
 };

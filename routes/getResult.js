@@ -1,3 +1,3 @@
-exports.getResult = function(){
-    render('resultPage');
+exports.getResult = function(req, res){
+    res.render('resultPage');
 };
