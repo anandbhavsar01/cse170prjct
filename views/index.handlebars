@@ -37,3 +37,42 @@
 		</div>
 	</body>
 </html>
+<html>
+	<head>
+		<title>The App</title>
+		<meta charset="utf-8">
+		<link href="../css/bootstrap-theme.css" rel="stylesheet">
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<link href="../css/index.css" rel="stylesheet">
+
+            <script src="https://code.jquery.com/jquery.js"></script>
+            <script src="/js/bootstrap.min.js"></script>
+	    <script src="/js/buttonClick.js"></script>
+
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Category Search</h1>
+			</header>
+			<form role="form" method="get" action="/search">
+				<label>Search: </label>
+				<input class="entry" type="text" id="entry" name="entry"> <br>
+				<a class="suggested" href="suggested">Suggested Content</a>
+				<h3>Categories: </h3>
+				<table class="categoryList">
+					<tbody>
+						{{#each categories}}
+						<tr>
+							{{#each group}}
+							<td> <input class="selectCategory" id="category" name="category" type="button" value="{{name}}"> </td>
+							{{/each}}
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+				<input class="submitButton" type="submit" value="Go">
+			</form>
+		</div>
+	</body>
+</html>
