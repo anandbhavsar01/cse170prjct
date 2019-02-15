@@ -5,25 +5,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="../css/bootstrap-theme.css" rel="stylesheet">
 		<link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/result.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
-            <button  id="backbutton">Back</button>
-            <h1>Results</h1>
-            <a href="results">first result</a>
-            <br>
-            <a href=".">second result</a>
-            <br>
-            <a href=".">third result</a>
-            <br>
-            <a href=".">fourth result</a>
-            <br>
-            <a href=".">fifth result</a>
+            <button id="backbutton">Back</button>
+            <h1>RESULTS</h1>
+            <table class="resTable">
+                <tbody>
+                {{#each pages}}
+                    <tr>
+                        <td class="result">  <a href="{{link}}"> {{name}}</a>
+                        <!-- <img class="img-thumbnail" src="{{image}}"> -->
+                        </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
         </div>
         <script  type="text/javascript">
             document.getElementById("backbutton").onclick = function (){
             location.href = '/index';
-        };
+            };
         </script>
     </body>
 </html>
