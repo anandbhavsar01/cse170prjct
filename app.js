@@ -41,7 +41,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', login.view);
-app.get('/login', index.view);
+app.get('/index', index.view);
 app.get('/search', search.postQuery);
 app.get('/suggested', suggested.getSuggested);
 app.get('/results', results.getResult);

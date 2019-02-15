@@ -5,15 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="../css/bootstrap-theme.css" rel="stylesheet">
 		<link href="../css/bootstrap.css" rel="stylesheet">
-        <script>
-            function goBack(){
-                window.history.back;
-            }
-        </script>
     </head>
     <body>
         <div class="container">
-            <button onclick="goBack()">Back</button>
+            <button  id="backbutton">Back</button>
             <h1>Results</h1>
             <a href="results">first result</a>
             <br>
@@ -25,5 +20,10 @@
             <br>
             <a href=".">fifth result</a>
         </div>
+        <script  type="text/javascript">
+            document.getElementById("backbutton").onclick = function (){
+            location.href = '/index';
+        };
+        </script>
     </body>
 </html>
