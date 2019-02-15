@@ -1,0 +1,45 @@
+{
+    "categories": [
+        {
+            "group": [
+                {
+                    "name" : "Jobs"
+                },
+                {
+                    "name" : "Housing"
+                },
+                {
+                    "name" : "Personal"
+                }
+            ]
+
+        },
+        {
+            "group" : [
+                {
+                    "name" : "How-To's"
+                },
+                {
+                    "name" : "Vacation"
+                },
+                {
+                    "name" : "Investing"
+                }
+            ]
+
+        },
+        {
+            "group" : [
+                {
+                    "name" : "Media"
+                },
+                {
+                    "name" : "News"
+                },
+                {
+                    "name" : "Gaming"
+                }
+            ]
+        }
+    ]
+}
