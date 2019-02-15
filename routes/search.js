@@ -1,4 +1,4 @@
-var pages = require("../results.json")
+var pages = require("../data.json")
 
 exports.postQuery = function(request, response){
     var newQuery = {
