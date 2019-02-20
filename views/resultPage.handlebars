@@ -9,7 +9,14 @@
 <body>
     <div class="container">
         <button id="backbutton">Back</button>
-        <h1>this result</h1>
+        {{#each page}}
+        <div class="result">
+            {{name}}
+            {{url}}
+            {{displayURL}}
+            {{snippet}}
+        </div>
+        {{/each}}
     </div>
     <script >
         document.getElementById("backbutton").onclick = function (){
