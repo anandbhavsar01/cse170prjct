@@ -16,7 +16,8 @@
     "express3-handlebars": "*",
     "localStorage": "^1.0.4",
     "mongodb": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "request": "^2.88.0"
   },
   "engines": {
     "node": "8.9.x"

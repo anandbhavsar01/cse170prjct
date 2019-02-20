@@ -12,7 +12,8 @@ var login = require('./routes/login');
 var index = require('./routes/index');
 var search = require('./routes/search');
 var suggested = require('./routes/suggested');
-var results = require('./routes/getResult')
+var results = require('./routes/getResult');
+var searchEngine = require('./public/js/searchEngine');
 // var result = require ('./routes/getResult');
 
 // Example route
@@ -45,6 +46,7 @@ app.get('/index', index.view);
 app.get('/search', search.postQuery);
 app.get('/suggested', suggested.getSuggested);
 app.get('/results', results.getResult);
+app.get('/makeQuery', searchEngine.makeQuery);
 // app.get('/getResult', result.getResult);
 // Example route
 // app.get('/users', user.list);
