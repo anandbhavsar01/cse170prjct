@@ -1,29 +1,4 @@
 {
   "pages" :[
-    {
-      "name" :"Yahoo mail",
-      "link" :"https://overview.mail.yahoo.com/",
-      "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yahoo_Logo.svg/400px-Yahoo_Logo.svg.png"
-    },
-    {
-      "name" :"GMail",
-      "link" :"https://gmail.com",
-      "image": "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x.png"
-    },
-    {
-      "name" :"Microsoft Live",
-      "link" :"https://account.live.com/dp",
-      "image": "https://acctcdn.msauth.net/images/ms-logo-v2_XshpB8GsXvPhF3I5mP64vg2.jpg"
-    },
-    {
-      "name" :"AOL Hotmail",
-      "link" :"https://login.aol.com/",
-      "image":"https://s.yimg.com/wm/assets/images/ns/aol-logo-black-v.0.0.2.png"
-    },
-    {
-      "name" :"Outlook",
-      "link" :"https://outlook.live.com/owa/",
-      "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Microsoft_Office_Outlook_%282013%E2%80%93present%29.svg/135px-Microsoft_Office_Outlook_%282013%E2%80%93present%29.svg.png"
-    }
   ]
 }
