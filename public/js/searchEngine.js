@@ -16,7 +16,12 @@ var info = {
 
 exports.makeQuery = function(req, response){
     console.log(req.query.entry);
-    searchTerm = req.query.entry;
+    var space = req.query.entry.indexOf(" ");
+    var mod = req.query.entry.substring(0, space);
+    var rest = req.query.entry.substring(space);
+    var improve = "\"" + mod + "\"";
+    searchTerm = improve + rest;
+    console.log(searchTerm);
     info = {
         url: 'https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/search?' + 
             'q=' + searchTerm + "&" +
@@ -32,12 +37,6 @@ exports.makeQuery = function(req, response){
         for(var i = 0; i < searchResponse.webPages.value.length; ++i){
             var webPage = searchResponse.webPages.value[i];
             data.pages.push(webPage);
-            /*console.log('name: ' + webPage.name);
-            console.log('url: ' + webPage.url);
-            console.log('displayUrl: ' + webPage.displayUrl);
-            console.log('snippet: ' + webPage.snippet);
-            console.log('dateLastCrawled: ' + webPage.dateLastCrawled);
-            console.log(); */
         }
         outResponse.render('resultPage', data);
     });
