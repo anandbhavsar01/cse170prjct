@@ -9,12 +9,11 @@
 <body>
     <div class="container">
         <button id="backbutton">Back</button>
-        {{#each page}}
+        {{#each pages}}
         <div class="result">
-            {{name}}
-            {{url}}
-            {{displayURL}}
-            {{snippet}}
+            <a href={{url}}>{{name}}</a>
+            <a href={{url}}>{{displayURL}}</a>
+            <p>{{snippet}}</p>
         </div>
         {{/each}}
     </div>
