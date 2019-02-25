@@ -1,4 +1,5 @@
 var request = require("request");
+var data = require("../../data.json");
 
 var subscriptionKey = '819db57334bf4af78e03a0e7f718bcbf';
 var customConfigId = '49dec242-0a3f-4155-9871-6a918809672a';
@@ -15,7 +16,12 @@ var info = {
 
 exports.makeQuery = function(req, response){
     console.log(req.query.entry);
-    searchTerm = req.query.entry;
+    var space = req.query.entry.indexOf(" ");
+    var mod = req.query.entry.substring(0, space);
+    var rest = req.query.entry.substring(space);
+    var improve = "\"" + mod + "\"";
+    searchTerm = improve + rest;
+    console.log(searchTerm);
     info = {
         url: 'https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/search?' + 
             'q=' + searchTerm + "&" +
@@ -24,31 +30,15 @@ exports.makeQuery = function(req, response){
             'Ocp-Apim-Subscription-Key' : subscriptionKey
         }
     }
-    var compileResults = [];
+    var outResponse = response;
     request(info, function(error, response, body){
         var searchResponse = JSON.parse(body);
+        data.pages = [];
         for(var i = 0; i < searchResponse.webPages.value.length; ++i){
             var webPage = searchResponse.webPages.value[i];
-            console.log('name: ' + webPage.name);
-            console.log('url: ' + webPage.url);
-            console.log('displayUrl: ' + webPage.displayUrl);
-            console.log('snippet: ' + webPage.snippet);
-            console.log('dateLastCrawled: ' + webPage.dateLastCrawled);
-            console.log();
-            var thisPage = {
-                page:
-                {
-                    'name' : webPage.name,
-                    'url' : webPage.url,
-                    'displayUrl' : webPage.displayUrl,
-                    'snippet' : webPage.snippet,
-                    'dateLastCrawled' : webPage.dateLastCrawled
-                }
-            }
-            compileResults.push(thisPage);
+            data.pages.push(webPage);
         }
+        outResponse.render('resultPage', data);
     });
-    console.log(compileResults);
-    response.render('resultPage', compileResults);
 }
 

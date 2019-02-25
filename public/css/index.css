@@ -12,11 +12,11 @@ input.selectCategory{
 
 
 input.selectCategory:focus {
-    background: #e5e5e5;
+    background: darkblue;
     outline: none;
-    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-            box-shadow: inset 0px 0px 5px #c1c1c1;
+    -webkit-box-shadow: inset 0px 0px 5px darkblue;
+       -moz-box-shadow: inset 0px 0px 5px darkblue;
+            box-shadow: inset 0px 0px 5px darkblue;
 } 
 
 input.selected{
@@ -47,7 +47,7 @@ input.submitButton{
 
 input.entry{
     height: 50px;
-    width: 500px;
+    width: 400px;
     margin-block-end: 25px;
     margin-block-start: 25px;
     margin-left: 25px;
@@ -72,4 +72,9 @@ a.suggested{
     margin-block-start: 25px;
     margin-left: 25px;
     margin-right: 25px;
+}
+
+header.header{
+  background-color: darkred;
+  color: aliceblue;
 }
