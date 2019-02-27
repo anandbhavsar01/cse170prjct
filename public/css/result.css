@@ -1,8 +1,13 @@
-td.result{
-    height: 20px;
-    width: 200px;
-    margin-block-end: 25px;
-    margin-block-start: 25px;
-    margin-bottom: 3px;
-    display: inline-block;
+img{
+    height: 50px;
+    width: 40px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
