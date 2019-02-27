@@ -1,80 +1,89 @@
-input.selectCategory{
-  height: 100px;
-  width: 100px;
-  margin-block-end: 25px;
-  margin-block-start: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
+button.selectCategory{
+  height: 200px;
+  width: calc( (100% / 3));
+  background-color: white;
   border-style: solid;
-  border-radius: 50%;
   display: inline-block;
+  font-size: 12px;
 }
 
+body{
+  margin: 0px;
+}
 
-input.selectCategory:focus {
-    background: darkblue;
-    outline: none;
-    -webkit-box-shadow: inset 0px 0px 5px darkblue;
-       -moz-box-shadow: inset 0px 0px 5px darkblue;
-            box-shadow: inset 0px 0px 5px darkblue;
+div.row{
+  font-size: 0px;
+  top: 50px;
+    left:0px;
+    right:0px;
+    bottom:0px; 
+}
+
+h4{
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+}
+
+button.selectCategory:focus {
+    background:#fcfcfc;
 } 
-
-input.selected{
-  height: 100px;
-  width: 100px;
-  margin-block-end: 25px;
-  margin-block-start: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
-  border-style: solid;
-  border-radius: 50%;
-  display: inline-block;
-  background-color: darkblue;
-  color: white;
-}
-
-input.submitButton{
-  margin: 0 auto;
-  height: 75px;
-  width: 500px;
-  margin-block-end: 25px;
-  margin-block-start: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
+/*
+button.selected{
+  height: 200px;
+  width: calc( (100% / 3));
+  background-color: white;
   border-style: solid;
   display: inline-block;
-}
+  font-size: 12px;
+}*/
 
 input.entry{
     height: 50px;
-    width: 500px;
-    margin-block-end: 25px;
-    margin-block-start: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+}
+
+.one-edge-shadow {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
 }
 
 html, body {
-    width: 100%;
-}
-table {
-    margin: 0 auto;
-    margin-block-end: 25px;
-    margin-block-start: 25px;
-    margin-left: 50px;
-    margin-right: 25px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-a.suggested{
-    margin: 0 auto;
-    font-size: 20px;
-    margin-block-end: 25px;
-    margin-block-start: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
+header{
+  width: 100%;
+  height: 120px;
 }
 
-header.header{
-  background-color: darkred;
-  color: aliceblue;
+footer.footer{
+  width: 100%;
+  font-size: 0px;  
+  display: inline-block; 
+}
+
+form{
+  width: 100%;
+}
+
+button.footerButton{
+  height: 100px;
+  width: 50%;
+  display: inline-block;
+  background-color: white;
+  border-style: solid;
+  font-size: 14px;
+}
+
+button.logout{
+  height: 50px;
+  width: 100%;
+  font-size: 14px;
+  background-color: white;
+  border-style: solid;
 }
