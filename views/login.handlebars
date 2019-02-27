@@ -22,16 +22,23 @@
 		<!-- End Google Analytics -->
     </head>
     <body>
+		{{!-- <div class="container">
+			<header>
+				<h1 class = "title">Bucket!</h1>
+			</header>
+		</div> --}}
 		<div class="container">
 			<header>
 				<h2>Login</h2>
 			</header>
 
             <form role="form" method="get" action="/index">
-                <label>Username: </label>
-				<input class="entry" type="text" id="entry" name="entry"> <br>
-                <label>Password: </label>
-				<input class="entry" type="password" id="entry" name="entry"> <br>
+                <label class = "lbl">Username: </label>
+								<br>
+								<input class="entry" type="text" id="entry" name="entry"> <br>
+                <label class = "lbl">Password: </label>
+								<br>
+								<input class="entry" type="password" id="entry" name="entry"> <br>
                 <input class="submitButton" type="submit" value="Login">
             </form>
         </div>

@@ -1,10 +1,18 @@
+.title{
+    text-align: center;
+    font-family: "Dekers_Bold", Arial, sans-serif;
+}
 h2 {
     text-align: center;
     font-family: 'Exo-Regular', Arial, sans-serif;
+    background-color: darkred;
+    color: white;
 }
 h3 {
     text-align: center;
     font-family: 'Exo-Regular', Arial, sans-serif;
+    background-color: darkred;
+    color: white;
 }
 @font-face {
     font-family:"Exo-Regular";
@@ -16,8 +24,36 @@ h3 {
     font-weight:normal;
     font-style:normal;
 }
+@font-face {
+    font-family:"Dekers_Bold";
+    src: url("../fonts/Dekers_Bold.eot");
+    src: 
+        url("../fonts/Dekers_Bold.woff") format("woff"),
+        url("../fonts/Dekers_Bold.otf") format("opentype"),
+        url("../fonts/Dekers_Bold.svg") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
 
 .facebookLogin{
+    display: table;
+    margin: auto;
+}
+
+.lbl {
+    display: table;
+    margin: auto;
+}
+
+.submitButton {
+    display: table;
+    margin: auto;
+    background-color: blue;
+    border-radius: 25px;
+    color: aliceblue;
+}
+
+input {
     display: table;
     margin: auto;
 }
