@@ -1,13 +1,56 @@
 {
     "categories": [
-        { "name" : "Jobs" },
-        { "name" : "Housing" },
-        {"name" : "Personal"},
-        {"name" : "How-To's" },
-        {"name" : "Vacation" },
-        {"name" : "Investing"},
-        { "name" : "Media"},
-        {"name" : "News"},
-        {"name" : "Gaming" }
+        {
+            "name" : "Jobs",
+            "include": ["Jobs"],
+            "exclude":  [""]
+        },
+
+        {
+            "name" : "Housing",
+            "include": ["Jobs"],
+            "exclude":  [""]
+        },
+
+        {
+            "name" : "Personal",
+            "include": ["Jobs"],
+            "exclude":  [""]
+        },
+
+        {
+            "name" : "How-To's",
+            "include": ["Jobs"],
+            "exclude":  [""]
+        },
+
+        {
+            "name" : "Vacation",
+            "include": ["Jobs"],
+            "exclude":  [""]
+        },
+
+        {
+            "name" : "Investing",
+            "include": ["Jobs"],
+            "exclude":  [""]
+        },
+
+        { "name" : "Media",
+            "include": ["Jobs"],
+            "exclude":  [""]
+        },
+
+        {
+            "name" : "News",
+            "include": ["Jobs"],
+            "exclude":  [""]
+        },
+
+        {
+            "name" : "Gaming",
+            "include": ["Jobs"],
+            "exclude":  [""]
+        }
     ]
 }
