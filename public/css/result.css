@@ -1,6 +1,6 @@
 img{
-    height: 50px;
-    width: 40px;
+    height: 40px;
+    width: 30px;
 }
 
 hr {
@@ -10,4 +10,15 @@ hr {
     border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
+}
+
+button{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h3{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25%;
 }
