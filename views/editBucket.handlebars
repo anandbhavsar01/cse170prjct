@@ -18,27 +18,56 @@
         <header class="header">
             <h1>Edit Bucket</h1>
         </header>
+
         <form autocomplete="off" role="form" method="get" action="/">
             <label>Name: </label>
 
             <input type="text" id="bucketName" name="bucketName"> <br>
-
-
-            <h2>included terms</h2>
-            <ul>
-                <li>term  <button class="btn-danger" name="remove">x</button></li>
-                <li>term  <button class="btn-danger" name="remove">x</button></li>
-            </ul>
-
-            <h2>Excluded terms</h2>
-            <ul>
-                <li>term <button class="btn-danger" name="remove">x</button></li>
-                <li>term <button class="btn-danger" name="remove">x</button></li>
-            </ul>
-            <input class="btn" value="save">
-            <input class="btn" value="cancel">
         </form>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">Included Terms</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <ul>
+                        <li>term  <button class="btn-danger" name="remove">x</button></li>
+                        <li>term  <button class="btn-danger" name="remove">x</button></li>
+                    </ul>
+                    <form autocomplete="on" role="form" method="get">
+                        <label>add term: </label>
+                        <input type="text" id="include_terms"> <br>
+                    </form>
+                </div>
+            </div>
+        </div>
 
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">excluded Terms</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <ul>
+                        <li>term  <button class="btn-danger" name="remove">x</button></li>
+                        <li>term  <button class="btn-danger" name="remove">x</button></li>
+                    </ul>
+                    <form autocomplete="on" role="form" method="get">
+                        <label>add term: </label>
+                        <input type="text" id="exclude_terms"> <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="btn" >save</button>
+        <button class="btn" >cancel</button>
     </div>
 
     <script  type="text/javascript">
