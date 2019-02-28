@@ -16,22 +16,17 @@
 	<body>
 		<div class="container-fluid">
 			<header class="header">
-				<form role="form" method="GET" action="/makeQuery">
-					<input class="entry" type="text" id="entry" name="entry" placeholder="Regular basic search..."/> <br>
-				</form>
 				<h4>
-					Or, make a much better search below...
+					Edit your filters or delete what you don't need
 				</h4>
 			</header>
 			<div class="row">
 				{{#each categories}}
-					<button class="selectCategory" id="category" name="category" onclick="/refine">{{name}}</button>
+					<button class="selectCategory" id="category" name="category" onclick="/edit">{{name}}</button>
 				{{/each}} <br>
 			</div>
 			<footer class="footer">
-				<button class="footerButton" onclick="/editPage">Edit</button>
-				<button class="footerButton" onclick="/addCategory">Add</button>
-				<button class="logout" onclick="/logout">Logout</button>
+				<button class="footerButton" onclick="/goBack">Back</button>
 			</footer>
 		</div>
 
