@@ -15,13 +15,11 @@ var info = {
 }
 
 exports.makeQuery = function(req, response){
-    console.log(req.query.entry);
     var space = req.query.entry.indexOf(" ");
     var mod = req.query.entry.substring(0, space);
     var rest = req.query.entry.substring(space);
     var improve = "\"" + mod + "\"";
     searchTerm = improve + rest;
-    console.log(searchTerm);
     info = {
         url: 'https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/search?' + 
             'q=' + searchTerm + "&" +

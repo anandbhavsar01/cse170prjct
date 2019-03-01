@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>editBucket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/index.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/buttonClick.js"></script>
+    </head>
+<body>
+
+    <div class="container">
+        <button id="backbutton">Back</button>
+
+        <header class="header">
+            <h1>Edit the Bucket</h1>
+        </header>
+
+        <form autocomplete="off" role="form" method="get" action="/">
+            <label>Rename: </label>
+            <input type="text" id="bucketName" name="bucketName" value="{{name}}"> <br>
+        </form>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">Included Terms</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <ul>
+                        {{#each include}}
+                            <li>{{term}}  <button class="btn-danger" name="remove">x</button></li>
+                        {{/each}}
+                    </ul>
+                    <form autocomplete="on" role="form" method="get">
+                        <label>Add Term: </label>
+                        <input type="text" id="include_terms"> <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">excluded Terms</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <ul>
+                        {{#each exclude}}
+                            <li> {{term}}  <button class="btn-danger" name="remove">x</button></li>
+                        {{/each}}
+                    </ul>
+                    <form autocomplete="on" role="form" method="get">
+                        <label>add term: </label>
+                        <input type="text" id="exclude_terms"> <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <p>
+            <button class="btn-lg" >save</button>
+            <button id="cancel" class="btn-lg">cancel</button>
+        </p>
+
+        <p><button class="btn-danger btn-lg">Delete search</button></p>
+    </div>
+
+    <script  type="text/javascript">
+        document.getElementById("backbutton").onclick = function (){
+            console.log('back')
+            location.href = '/index';
+        };
+        document.getElementById("cancel").onclick = function (){
+            console.log('back')
+            location.href = '/index';
+        };
+    </script>
+</body>
