@@ -34,12 +34,13 @@
                 <div id="collapse1" class="panel-collapse collapse">
                     <ul>
                         {{#each include}}
-                            <li>{{term}}  <button class="btn-danger" name="remove">x</button></li>
+                            <li id="@index">{{term}}  <button class="btn-danger" id="@index" name="remove">x</button></li>
                         {{/each}}
                     </ul>
-                    <form autocomplete="on" role="form" method="get">
+                    <form autocomplete="on" id="include_form">
                         <label>Add Term: </label>
-                        <input type="text" id="include_terms"> <br>
+                        <input type="text" id="include_terms">
+                        <button class="btn" form="include_form" value="Submit">Add</button>
                     </form>
                 </div>
             </div>
@@ -56,12 +57,13 @@
                 <div id="collapse2" class="panel-collapse collapse">
                     <ul>
                         {{#each exclude}}
-                            <li> {{term}}  <button class="btn-danger" name="remove">x</button></li>
+                            <li id="{{@index}}"> {{term}}  <button class="btn-danger" name="remove">x</button></li>
                         {{/each}}
                     </ul>
-                    <form autocomplete="on" role="form" method="get">
-                        <label>add term: </label>
-                        <input type="text" id="exclude_terms"> <br>
+                    <form autocomplete="on"  id="exclude_form">
+                        <label>Add term: </label>
+                        <input type="text" id="exclude_terms">
+                        <button class="btn" form="exclude_form" value="Submit">Add</button>
                     </form>
                 </div>
             </div>
@@ -76,11 +78,11 @@
 
     <script  type="text/javascript">
         document.getElementById("backbutton").onclick = function (){
-            console.log('back')
+            console.log('back');
             location.href = '/index';
         };
         document.getElementById("cancel").onclick = function (){
-            console.log('back')
+            console.log('back');
             location.href = '/index';
         };
     </script>
