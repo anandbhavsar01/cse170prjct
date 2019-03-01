@@ -11,11 +11,14 @@
 .selectCategory{
   height: 200px;
   width: 100%;
-  background-color: white;
+  background-color: paleturquoise;
   border-style: solid;
   display: inline-block;
   font-size: 12px;
+  color: darkgreen;
+  border-color: lightseagreen;
 }
+
   
   body{
     margin: 0px;
@@ -36,7 +39,8 @@
   }
   
   input.selectCategory:focus {
-      background:#fcfcfc;
+    background:rgba(11, 160, 187, 0.699);
+    color: rgb(24, 138, 132);
   }  
   
   html, body {
