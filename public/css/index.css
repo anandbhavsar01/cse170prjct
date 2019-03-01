@@ -74,14 +74,15 @@ header{
   height: 120px;
 }
 
-footer.footer{
+.footer{
+  height: 80px;
   width: 100%;
   font-size: 0px;  
   display: inline-block; 
 }
 
-button.footerButton{
-  height: 100px;
+button.footerButtonB{
+  height: 80px;
   width: 50%;
   display: inline-block;
   background-color: white;

@@ -34,18 +34,18 @@
 					Or, make a much better search below...
 				</h4>
 			</header>
+			<div class="footer">
+				<button class="footerButtonB" onclick="location.href='/edit'">Edit</button>
+				<button class="footerButtonB" onclick="/addCategory">Add</button>
+			</div>
 			<div class="row">
 				{{#each categories}}
 					<form class="formCategory" role="form" method="GET" action="/refine">
 						<input class="selectCategory" id="{{name}}" name="entry" onclick="/refine" type="submit" value="{{name}}"/>
 					</form>
 				{{/each}} <br>
-
-                var = jasonparse(catagories)[]
 			</div>
 			<footer class="footer">
-				<button class="footerButton" onclick="location.href='/edit'">Edit</button>
-				<button class="footerButton" onclick="/addCategory">Add</button>
 				<button class="logout" onclick="location.href='/'">Logout</button>
 				<button class="logout">If you like this mode more, press this button</button>
 			</footer>
