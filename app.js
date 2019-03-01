@@ -11,8 +11,9 @@ var handlebars = require('express3-handlebars')
 var login = require('./routes/login');
 var index = require('./routes/index');
 var search = require('./routes/search');
-var results = require('./routes/getResult');
 var searchEngine = require('./public/js/searchEngine');
+var editBucket = require('./routes/edit');
+
 // var result = require ('./routes/getResult');
 
 // Example route
@@ -44,8 +45,9 @@ if ('development' == app.get('env')) {
 app.get('/', login.view);
 app.get('/index', index.view);
 app.get('/search', search.postQuery);
-app.get('/results', results.getResult);
 app.get('/makeQuery', searchEngine.makeQuery);
+app.get('/edit', editBucket.editView);
+app.get('/editBucket', editBucket.view);
 // app.get('/getResult', result.getResult);
 // Example route
 // app.get('/users', user.list);

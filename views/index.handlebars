@@ -1,10 +1,10 @@
-
 <html>
 	<head>
 		<title>The App</title>
 		<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=0.8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="../css/bootstrap-theme.css" rel="stylesheet">
+		<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="../css/bootstrap.css" rel="stylesheet">
 		<link href="../css/index.css" rel="stylesheet">
 
@@ -24,21 +24,30 @@
 		<!-- End Google Analytics -->
 	</head>
 	<body>
-		<div class="container">
+
+		<div class="container-fluid">
 			<header class="header">
-				<h1>Category Search</h1>
+				<form role="form" method="GET" action="/makeQuery">
+					<input class="entry" type="text" id="entry" name="entry" placeholder="Regular basic search..."/> <br>
+				</form>
+				<h4>
+					Or, make a much better search below...
+				</h4>
 			</header>
-			<form autocomplete="off" role="form" method="get" action="/makeQuery">
-				<label>Search: </label>
-				
-				<input class="entry" type="text" id="entry" name="entry"> <br>
-				<a class="suggested" href="suggested">Suggested Content</a>
-				<h3>Categories: </h3>
+			<div class="row">
 				{{#each categories}}
-					<input class="selectCategory" id="category" name="category" type="button" value="&quot;{{name}}&quot;">
+					<button class="selectCategory" id="{{name}}" name="{{@index}}" onclick="/refine">{{name}}</button>
 				{{/each}} <br>
-				<input class="submitButton" type="submit" value="Go">
-			</form>
+
+                var = jasonparse(catagories)[]
+			</div>
+			<footer class="footer">
+				<button class="footerButton" onclick="location.href='/edit'">Edit</button>
+				<button class="footerButton" onclick="/addCategory">Add</button>
+				<button class="logout" onclick="/logout">Logout</button>
+			</footer>
 		</div>
+
 	</body>
+	
 </html>
