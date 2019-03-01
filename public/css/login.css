@@ -1,0 +1,73 @@
+
+.title{
+    text-align: center;
+    font-family: "Dekers_Bold", Arial, sans-serif;
+}
+h2 {
+    text-align: center;
+    font-family: 'Exo-Regular', Arial, sans-serif;
+    background-color: darkred;
+    padding: 5px;
+    color: white;
+}
+h3 {
+    text-align: center;
+    font-family: 'Exo-Regular', Arial, sans-serif;
+    background-color: darkred;
+    padding: 5px;
+    color: white;
+}
+@font-face {
+    font-family:"Exo-Regular";
+    src: url("../fonts/Exo-Regular.eot");
+    src: 
+        url("../fonts/Exo-Regular.woff") format("woff"),
+        url("../fonts/Exo-Regular.otf") format("opentype"),
+        url("../fonts/Exo-Regular.svg") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:"Dekers_Bold";
+    src: url("../fonts/Dekers_Bold.eot");
+    src: 
+        url("../fonts/Dekers_Bold.woff") format("woff"),
+        url("../fonts/Dekers_Bold.otf") format("opentype"),
+        url("../fonts/Dekers_Bold.svg") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+.facebookLogin{
+    display: table;
+    margin: auto;
+}
+
+.lbl {
+    display: table;
+    margin: auto;
+}
+
+.submitButton {
+    width: 100px;
+    height: 50px;
+    display: table;
+    margin: auto;
+    background-color: lightblue;
+    border-radius: 25px;
+    color: darkblue;
+    font-family: 'Exo-Regular', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.entry {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: table;
+    margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
