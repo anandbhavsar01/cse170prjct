@@ -20,7 +20,6 @@ exports.makeQuery = function(req, response){
         console.log(req.query.entry[i]);
         searchTerm = searchTerm + "\"" +  req.query.entry[i] + "\" ";
     }
-    console.log(searchTerm);
     info = {
         url: 'https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/search?' + 
             'q=' + searchTerm + "&" +
@@ -35,7 +34,6 @@ exports.makeQuery = function(req, response){
         data.pages = [];
         for(var i = 0; i < searchResponse.webPages.value.length; ++i){
             var webPage = searchResponse.webPages.value[i];
-            console.log(webPage);
             data.pages.push(webPage);
         }
         outResponse.render('results', data);
