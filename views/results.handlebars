@@ -1,12 +1,12 @@
 <html>
-	<head>
-		<title>The App</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="../css/bootstrap-theme.css" rel="stylesheet">
-		<link href="../css/bootstrap.css" rel="stylesheet">
-        <link href="../css/result.css" rel="stylesheet">
-        <!-- Google Analytics -->
+<head>
+    <title>The App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/result.css" rel="stylesheet">
+    <!-- Google Analytics -->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,34 +17,27 @@
 			ga('send', 'pageview');
 		</script>
 		<!-- End Google Analytics -->
-    </head>
-    <body>
-        <div class="container">
-            <button id="backbutton">Back</button>
-            <h1>RESULTS</h1>
-            <table class="resTable">
-                <tbody>
-                {{#each pages}}
-                    <tr>
-                        <td class="result">  <a href="{{url}}"> {{name}}</a>
-                        <!-- <img class="img-thumbnail" src="{{image}}"> -->
-                        </td>
-                    </tr>
-                {{/each}}
-                </tbody>
-            </table>
+
+</head>
+<body>
+    <div class="container">
+        <button id="backbutton"><img src="../images/back.png"></button>
+        <h3> Results </h1>
+        {{#each pages}}
+        <hr />
+        <div class="result"> 
+            <a class = "linkName" href={{url}}>{{name}}</a>
+            <a href={{url}}>{{displayURL}}</a>
+            <p>{{snippet}}</p>
+
         </div>
-        <h3> Is the info you want not here? our experts have you covered!</h3>
-        <button id="askButton"> ask an expert</button>
-        <script  type="text/javascript">
-            document.getElementById("backbutton").onclick = function (){
-            location.href = '/index';
-            };
-        </script>
-        <script  type="text/javascript">
-            document.getElementById("askbutton").onclick = function (){
-                location.href = '/ask_a_question';
-            };
-        </script>
-    </body>
+        {{/each}}
+    </div>
+    <script >
+        document.getElementById("backbutton").onclick = function (){
+            console.log("click");
+            location.href = "/index";
+        };
+    </script>
+</body>
 </html>

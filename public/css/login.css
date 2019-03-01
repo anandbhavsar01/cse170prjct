@@ -1,4 +1,7 @@
-
+body {
+    background-image: url(../images/two750.jpg);
+    
+}
 .title{
     text-align: center;
     font-family: "Dekers_Bold", Arial, sans-serif;
@@ -6,14 +9,14 @@
 h2 {
     text-align: center;
     font-family: 'Exo-Regular', Arial, sans-serif;
-    background-color: darkred;
+    background-color: darkgreen;
     padding: 5px;
     color: white;
 }
 h3 {
     text-align: center;
     font-family: 'Exo-Regular', Arial, sans-serif;
-    background-color: darkred;
+    background-color: darkgreen;
     padding: 5px;
     color: white;
 }
@@ -53,9 +56,9 @@ h3 {
     height: 50px;
     display: table;
     margin: auto;
-    background-color: lightblue;
+    background-color: yellow;
     border-radius: 25px;
-    color: darkblue;
+    color: darkgreen;
     font-family: 'Exo-Regular', Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
