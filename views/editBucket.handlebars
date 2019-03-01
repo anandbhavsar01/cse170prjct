@@ -22,8 +22,7 @@
 
         <form autocomplete="off" role="form" method="get" action="/">
             <label>Rename: </label>
-
-            <input type="text" id="bucketName" name="bucketName"> <br>
+            <input type="text" id="bucketName" name="bucketName" value="{{name}}"> <br>
         </form>
         <div class="panel-group">
             <div class="panel panel-default">
@@ -34,11 +33,12 @@
                 </div>
                 <div id="collapse1" class="panel-collapse collapse">
                     <ul>
-                        <li>term  <button class="btn-danger" name="remove">x</button></li>
-                        <li>term  <button class="btn-danger" name="remove">x</button></li>
+                        {{#each include}}
+                            <li>{{term}}  <button class="btn-danger" name="remove">x</button></li>
+                        {{/each}}
                     </ul>
                     <form autocomplete="on" role="form" method="get">
-                        <label>add term: </label>
+                        <label>Add Term: </label>
                         <input type="text" id="include_terms"> <br>
                     </form>
                 </div>
@@ -55,8 +55,9 @@
                 </div>
                 <div id="collapse2" class="panel-collapse collapse">
                     <ul>
-                        <li>term  <button class="btn-danger" name="remove">x</button></li>
-                        <li>term  <button class="btn-danger" name="remove">x</button></li>
+                        {{#each exclude}}
+                            <li> {{term}}  <button class="btn-danger" name="remove">x</button></li>
+                        {{/each}}
                     </ul>
                     <form autocomplete="on" role="form" method="get">
                         <label>add term: </label>
