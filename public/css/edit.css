@@ -1,4 +1,4 @@
-button.selectCategory{
+input.selectCategory{
     height: 200px;
     width: calc( (100% / 3));
     background-color: white;
@@ -25,17 +25,9 @@ button.selectCategory{
     padding: 5px;
   }
   
-  button.selectCategory:focus {
+  input.selectCategory:focus {
       background:#fcfcfc;
-  } 
-  
-  input.entry{
-      height: 50px;
-      width: 100%;
-      padding: 10px;
-      margin: auto;
-  }
-  
+  }  
   
   html, body {
     max-width: 100%;
@@ -54,7 +46,7 @@ button.selectCategory{
   }
   
   
-  button.footerButton{
+  .editFooterButton{
     height: 100px;
     width: 100%;
     display: inline-block;

@@ -33,3 +33,7 @@ function initializePage() {
 		console.log("Current entry is: " + $('.entry').val());
 	});
 }
+
+function test (req, res){
+	console.log("req");
+  }
