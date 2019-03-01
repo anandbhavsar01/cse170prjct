@@ -36,7 +36,7 @@ exports.makeQuery = function(req, response){
             var webPage = searchResponse.webPages.value[i];
             data.pages.push(webPage);
         }
-        outResponse.render('resultPage', data);
+        outResponse.render('results', data);
     });
 }
 

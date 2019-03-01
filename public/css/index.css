@@ -1,10 +1,12 @@
 button.selectCategory{
   height: 200px;
   width: calc( (100% / 3));
-  background-color: white;
+  background-color: paleturquoise;
   border-style: solid;
   display: inline-block;
   font-size: 12px;
+  color: darkgreen;
+  border-color: lightseagreen;
 }
 
 body{
@@ -26,7 +28,8 @@ h4{
 }
 
 button.selectCategory:focus {
-    background:#fcfcfc;
+    background:rgba(11, 160, 187, 0.699);
+    color: rgb(24, 138, 132);
 } 
 /*
 button.selected{
