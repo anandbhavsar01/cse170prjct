@@ -11,3 +11,4 @@ exports.view = function(req, res){
 exports.viewAlt = function(req, res){
   res.render('index_B', data);
 };
+
