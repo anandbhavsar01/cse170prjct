@@ -26,8 +26,10 @@
 			</header>
 			<div class="row">
 				{{#each categories}}
-					<button class="selectCategory" id="category" name="category" onclick="/refine">{{name}}</button>
+					<button class="selectCategory" id="{{name}}" name="{{@index}}" onclick="/refine">{{name}}</button>
 				{{/each}} <br>
+
+                var = jasonparse(catagories)[]
 			</div>
 			<footer class="footer">
 				<button class="footerButton" onclick="/editPage">Edit</button>

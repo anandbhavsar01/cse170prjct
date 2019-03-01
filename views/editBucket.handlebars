@@ -12,6 +12,7 @@
         <script src="/js/buttonClick.js"></script>
     </head>
 <body>
+
     <div class="container">
         <button id="backbutton">Back</button>
 
@@ -66,13 +67,22 @@
         </div>
 
 
-        <button class="btn" >save</button>
-        <button class="btn" >cancel</button>
+        <p>
+            <button class="btn-lg" >save</button>
+            <button id="cancel" class="btn-lg">cancel</button>
+        </p>
+
+        <p><button class="btn-danger btn-lg">Delete search</button></p>
     </div>
 
     <script  type="text/javascript">
-            document.getElementById("backbutton").onclick = function (){
-                location.href = '/index';
-            };
+        document.getElementById("backbutton").onclick = function (){
+            console.log('back')
+            location.href = '/index';
+        };
+        document.getElementById("cancel").onclick = function (){
+            console.log('back')
+            location.href = '/index';
+        };
     </script>
 </body>
