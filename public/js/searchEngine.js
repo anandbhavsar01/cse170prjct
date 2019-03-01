@@ -1,8 +1,8 @@
 var request = require("request");
 var data = require("../../data.json");
 
-var subscriptionKey = '5a05c3ac606849c795229135a67eb951';
-var customConfigId = '49dec242-0a3f-4155-9871-6a918809672a';
+var subscriptionKey = '9850ad22b10443f78076d3ba778bad53';
+var customConfigId = 'dc02bf21-37b9-4779-8810-2d43cb4d0c05';
 var searchTerm = 'microsoft';
 
 var info = {
