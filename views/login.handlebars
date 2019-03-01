@@ -5,30 +5,49 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="../css/bootstrap-theme.css" rel="stylesheet">
 		<link href="../css/bootstrap.css" rel="stylesheet">
+		<link href="../css/login.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery.js"></script>
 		{{> facebook}}
-		<script src="/js/facebook.js"></script>
+		<script src="../js/facebook.js"></script>
+		<!-- Google Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-134940364-2', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<!-- End Google Analytics -->
     </head>
     <body>
 		<div class="container">
 			<header>
-				<h1>Login</h1>
+				<h1 class = "title">Bucket!</h1>
+			</header>
+		</div>
+		<div class="container">
+			<header>
+				<h2>Login</h2>
 			</header>
 
             <form role="form" method="get" action="/index">
-                <label>Username: </label>
-				<input class="entry" type="text" id="entry" name="entry"> <br>
-                <label>Password: </label>
-				<input class="entry" type="password" id="entry" name="entry"> <br>
+                <label class = "lbl">Username: </label>
+								<br>
+								<input class="entry" type="text" id="entry" name="entry"> <br>
+                <label class = "lbl">Password: </label>
+								<br>
+								<input class="entry" type="password" id="entry" name="entry"> <br>
                 <input class="submitButton" type="submit" value="Login">
             </form>
         </div>
         <div class ="container">
-        	<h2> Login with Facebook! </h2>
+        	<h3> Login with Facebook! </h3>
 	        <p class="facebookLogin">
-				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-				</fb:login-button>
-			</p>
+							<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+							</fb:login-button>
+					</p>
 		</div>
 		<script>
 		  window.fbAsyncInit = function() {
