@@ -81,6 +81,15 @@ header{
   display: inline-block; 
 }
 
+button.footerButton{
+  height: 80px;
+  width: 50%;
+  display: inline-block;
+  background-color: white;
+  border-style: solid;
+  font-size: 14px;
+}
+
 button.footerButtonB{
   height: 80px;
   width: 50%;
