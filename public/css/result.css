@@ -1,3 +1,11 @@
+
+td.result{
+    height: 100px;
+    width: 95%;
+    margin-block-end: 25px;
+    margin-block-start: 25px;
+    margin-bottom: 3px;
+
 img{
     height: 40px;
     width: 30px;

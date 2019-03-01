@@ -1,11 +1,21 @@
-input.selectCategory{
-    height: 200px;
-    width: calc( (100% / 3));
-    background-color: white;
-    border-style: solid;
-    display: inline-block;
-    font-size: 12px;
-  }
+.formCategory{
+  height: 200px;
+  width: calc( (100% / 3));
+  background-color: white;
+  border-color: white;
+  border-style: solid;
+  display: inline-block;
+  font-size: 0px;
+}
+
+.selectCategory{
+  height: 200px;
+  width: 100%;
+  background-color: white;
+  border-style: solid;
+  display: inline-block;
+  font-size: 12px;
+}
   
   body{
     margin: 0px;
