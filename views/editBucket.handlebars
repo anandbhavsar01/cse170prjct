@@ -9,65 +9,71 @@
 
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/buttonClick.js"></script>
+        <script src="/js/edit_b.js"></script>
     </head>
 <body>
 
-    <div class="container">
+
+    <div class="container-fluid">
         <button id="backbutton">Back</button>
 
         <header class="header">
             <h1>Edit the Bucket</h1>
         </header>
 
-        <form autocomplete="off" role="form" method="get" action="/">
+        <form id="name" autocomplete="off" role="form" method="get" action="/">
             <label>Rename: </label>
             <input type="text" id="bucketName" name="bucketName" value="{{name}}"> <br>
         </form>
-        <div class="panel-group">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse1">Included Terms</a>
-                    </h4>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse">
-                    <ul>
-                        {{#each include}}
-                            <li id="@index">{{term}}  <button class="btn-danger" id="@index" name="remove">x</button></li>
-                        {{/each}}
-                    </ul>
-                    <form autocomplete="on" id="include_form">
-                        <label>Add Term: </label>
-                        <input type="text" id="include_terms">
-                        <button class="btn" form="include_form" value="Submit">Add</button>
-                    </form>
+
+        <form method="get" name="{{name}}" id="big_form" action="/update">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1">Included Terms</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <ul>
+                            {{#each include}}
+                                <li id="@index">{{term}}  <button class="btn-danger remove" id="@index">x</button></li>
+
+                                <input type="hidden" form="big_form" value="{{term}}" class="included_term">
+                            {{/each}}
+                        </ul>
+                            <label>Add Term: </label>
+                            <input type="text" id="include_terms">
+                            <input class="btn" form="big_form" value="Add" type="submit"/>
+
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2">excluded Terms</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <ul>
+                            {{#each exclude}}
+                                <li id="{{@index}}"> {{term}}  <button class="btn-danger" name="remove">x</button></li>
+                                <input type="hidden" form="big_form" value="{{term}}" class="excluded_term">
+                            {{/each}}
+                        </ul>
 
-        <div class="panel-group">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse2">excluded Terms</a>
-                    </h4>
-                </div>
-                <div id="collapse2" class="panel-collapse collapse">
-                    <ul>
-                        {{#each exclude}}
-                            <li id="{{@index}}"> {{term}}  <button class="btn-danger" name="remove">x</button></li>
-                        {{/each}}
-                    </ul>
-                    <form autocomplete="on"  id="exclude_form">
-                        <label>Add term: </label>
-                        <input type="text" id="exclude_terms">
-                        <button class="btn" form="exclude_form" value="Submit">Add</button>
-                    </form>
+                            <label>Add term: </label>
+                            <input type="text" form="big_form" class="excluded_term" id="exclude_terms" name="exclude_terms">
+                            <input type="hidden" form="big_form" value="{{name}}" id="catagory" id="catagory">
+                            <input class="btn" form="big_form" value="Add" type="submit"/>
+
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
         <p>
             <button class="btn-lg" >save</button>
             <button id="cancel" class="btn-lg">cancel</button>
@@ -79,11 +85,14 @@
     <script  type="text/javascript">
         document.getElementById("backbutton").onclick = function (){
             console.log('back');
-            location.href = '/index';
+            location.href = '/edit';
         };
         document.getElementById("cancel").onclick = function (){
             console.log('back');
             location.href = '/index';
         };
+        document.getElementsByName("remove").onclick =function(){
+            this.parentElement.style.display = 'none';
+        }
     </script>
 </body>

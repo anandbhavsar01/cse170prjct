@@ -18,6 +18,7 @@ function initializePage() {
 		
 		
 	});
+
 	$('.submitButton').click(function(e) {
 		var elements = document.querySelectorAll("input[type=button]");   
 
@@ -33,9 +34,7 @@ function initializePage() {
 		$('.entry').val($('.entry').val() + categories);
 		console.log("Current entry is: " + $('.entry').val());
 	});
-}
 
-function initEdits(){
 	$('include_form').submit(function(e){
 		e.preventDefault();
 
@@ -54,6 +53,10 @@ function initEdits(){
 		console.log(new_term);
 
 	});
+}
+
+function initEdits(){
+
 };
 
 function test (req, res){

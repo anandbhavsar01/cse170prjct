@@ -13,6 +13,7 @@ var index = require('./routes/index');
 var search = require('./routes/search');
 var searchEngine = require('./public/js/searchEngine');
 var editBucket = require('./routes/edit');
+var update = require('./routes/update')
 
 // var result = require ('./routes/getResult');
 
@@ -47,6 +48,7 @@ app.get('/search', search.postQuery);
 app.get('/makeQuery', searchEngine.makeQuery);
 app.get('/edit', editBucket.editView);
 app.get('/editBucket', editBucket.view);
+app.get('/update', update.update);
 // app.get('/getResult', result.getResult);
 // Example route
 // app.get('/users', user.list);

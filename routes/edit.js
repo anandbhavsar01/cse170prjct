@@ -14,6 +14,9 @@ exports.view = function(req, res){
     res.render('editBucket', editData);
 };
 
+
+
 exports.editView = function(req, res){
     res.render('edit', data);
 }
+
