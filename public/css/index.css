@@ -1,7 +1,17 @@
-button.selectCategory{
+.formCategory{
   height: 200px;
   width: calc( (100% / 3));
   background-color: paleturquoise;
+  border-color: white;
+  border-style: solid;
+  display: inline-block;
+  font-size: 0px;
+}
+
+.selectCategory{
+  height: 200px;
+  width: 100%;
+  background-color: white;
   border-style: solid;
   display: inline-block;
   font-size: 12px;
@@ -27,7 +37,7 @@ h4{
   padding: 5px;
 }
 
-button.selectCategory:focus {
+.selectCategory:focus {
     background:rgba(11, 160, 187, 0.699);
     color: rgb(24, 138, 132);
 } 
@@ -70,9 +80,6 @@ footer.footer{
   display: inline-block; 
 }
 
-form{
-  width: 100%;
-}
 button.footerButton{
   height: 100px;
   width: 50%;
