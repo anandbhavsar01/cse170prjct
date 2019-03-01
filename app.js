@@ -44,6 +44,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', login.view);
 app.get('/index', index.view);
+app.get('/index_B', index.viewAlt);
 app.get('/search', search.postQuery);
 app.get('/makeQuery', searchEngine.makeQuery);
 app.get('/edit', editBucket.editView);
