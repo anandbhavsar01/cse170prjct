@@ -27,8 +27,9 @@
 
 		<div class="container-fluid">
 			<header class="header">
-				<form role="form" method="GET" action="/makeQuery">
-					<input class="entry" type="text" id="entry" name="entry" placeholder="Regular basic search..."/> <br>
+				<form class="headerForm" role="form" method="GET" action="/makeQuery">
+					<input class="entry" type="text" id="entry" name="entry" placeholder="Regular basic search..."/> 
+					<button class="logout" onclick="location.href='/'"><img src="/images/logout.png" height="40px" width="40px"alt="Logout"></button>
 				</form>
 				<h4>
 					Or, make a much better search below...
@@ -42,10 +43,9 @@
 				{{/each}} <br>
 			</div>
 			<footer class="footer">
-				<button class="footerButton" onclick="location.href='/edit'">Edit</button>
-				<button class="footerButton" onclick="location.href='/add'">Add</button>
-				<button class="logout" onclick="location.href='/'">Logout</button>
-				<button class="logout">If you like this mode more, press this button</button>
+				<button class="footerButton" onclick="location.href='/edit'"><img class="center" src="/images/edit.png" height="30px" width="30px" alt="Edit">Edit</button>
+				<button class="footerButton" onclick="location.href='/add'"><img class="center" src="/images/add.png" height="30px" width="30px" alt="Add">Add</button>
+				<button class="like">If you like this mode more, press this button</button>
 			</footer>
 		</div>
 	</body>
