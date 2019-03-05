@@ -2,10 +2,11 @@
   height: 200px;
   width: calc( (100% / 3));
   background-color: paleturquoise;
-  border-color: white;
   border-style: solid;
   display: inline-block;
   font-size: 0px;
+  border-width: 1px;
+  border-color: lightseagreen;
 }
 
 .selectCategory{
@@ -26,15 +27,16 @@ body{
 div.row{
   font-size: 0px;
   top: 50px;
-    left:0px;
-    right:0px;
-    bottom:0px; 
+  left:0px;
+  right:0px;
+  bottom:0px; 
 }
 
 h4{
   text-align: center;
   margin: auto;
   padding: 5px;
+  background-color: paleturquoise;
 }
 
 .selectCategory:focus {
@@ -52,10 +54,12 @@ button.selected{
 }*/
 
 input.entry{
-    height: 50px;
-    width: 100%;
-    padding: 10px;
-    margin: auto;
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  margin: auto; 
+  border-width: 1px;
+  border-color: lightseagreen;
 }
 
 .one-edge-shadow {
@@ -72,6 +76,9 @@ html, body {
 header{
   width: 100%;
   height: 120px;
+  background-color: paleturquoise;
+  border-width: 1px;
+  border-color: lightseagreen;
 }
 
 .footer{
@@ -88,6 +95,9 @@ button.footerButton{
   background-color: white;
   border-style: solid;
   font-size: 14px;
+  border-width: 1px;
+  border-color: lightseagreen;
+  background-color: paleturquoise;
 }
 
 button.footerButtonB{
@@ -97,6 +107,9 @@ button.footerButtonB{
   background-color: white;
   border-style: solid;
   font-size: 14px;
+  border-width: 1px;
+  border-color: lightseagreen;
+  background-color: paleturquoise;
 }
 
 button.logout{
@@ -105,4 +118,7 @@ button.logout{
   font-size: 14px;
   background-color: white;
   border-style: solid;
+  border-width: 1px;
+  border-color: lightseagreen;
+  background-color: paleturquoise;
 }

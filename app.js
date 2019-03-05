@@ -14,6 +14,7 @@ var search = require('./routes/search');
 var searchEngine = require('./public/js/searchEngine');
 var editBucket = require('./routes/edit');
 var refinedSearch = require('./routes/refinedSearch');
+var add = require('./routes/add');
 
 // var result = require ('./routes/getResult');
 
@@ -50,6 +51,8 @@ app.get('/makeQuery', searchEngine.makeQuery);
 app.get('/edit', editBucket.editView);
 app.get('/editBucket', editBucket.view);
 app.get('/refine', refinedSearch.view);
+app.get('/add', add.view);
+app.get('/addCategory', add.addCategory);
 // app.get('/getResult', result.getResult);
 // Example route
 // app.get('/users', user.list);
