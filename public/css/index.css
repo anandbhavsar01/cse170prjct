@@ -23,6 +23,7 @@
   font-size: 24px;
   color: darkgreen;
   border-color: lightseagreen;
+  overflow-wrap: break-word;
 }
 
 body{
