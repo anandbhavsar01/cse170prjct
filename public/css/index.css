@@ -1,5 +1,5 @@
 .formCategory{
-  height: 200px;
+  height: calc((100%/3));
   width: calc( (100% / 3));
   background-color: paleturquoise;
   border-style: solid;
@@ -7,6 +7,7 @@
   font-size: 0px;
   border-width: 1px;
   border-color: lightseagreen;
+  word-wrap: break-word;
 }
 
 .headerForm{
@@ -15,7 +16,8 @@
 }
 
 .selectCategory{
-  height: 200px;
+  text-align: center;
+  height: 100%;
   width: 100%;
   background-color: white;
   border-style: solid;
@@ -23,6 +25,9 @@
   font-size: 24px;
   color: darkgreen;
   border-color: lightseagreen;
+  overflow-wrap: break-word;
+  border-width: 1px;
+  padding: 1px;
 }
 
 body{
@@ -58,21 +63,14 @@ h4{
   display:flex;
   align-items: center;
   justify-content: center;
+  border-width: 1px;
+  border-color: lightseagreen;
 }
 
 .selectCategory:focus {
     background:rgba(11, 160, 187, 0.699);
     color: rgb(24, 138, 132);
 } 
-/*
-button.selected{
-  height: 200px;
-  width: calc( (100% / 3));
-  background-color: white;
-  border-style: solid;
-  display: inline-block;
-  font-size: 12px;
-}*/
 
 input.entry{
   height: 50px;
