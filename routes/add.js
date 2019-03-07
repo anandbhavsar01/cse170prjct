@@ -5,7 +5,7 @@ exports.view = function(req, res){
 }
 
 exports.addCategory = function(req, res){
-    if(req.query.bucketName != undefined){
+    if(req.query.bucketName != undefined && req.query.bucketName != ""){
         var name = req.query.bucketName;
         var exists = false;
         console.log(categories["categories"].length);
