@@ -20,66 +20,64 @@
             <h1>Edit the Bucket</h1>
         </header>
 
-        <form autocomplete="off" role="form" method="get" action="/">
+        <form autocomplete="off" role="form" method="get" action="/makeEdit">
             <label>Rename: </label>
+            <input type="hidden" id="oldentry" name="oldentry" value="{{name}}">
             <input type="text" id="bucketName" name="bucketName" value="{{name}}"> <br>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1">Included Terms</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <ul>
+                            {{#each include}}
+                                <label>Add Term: </label>
+                                <input type="text" id="include_terms" name="include_terms"> <br>
+                                <li>{{term}}  <button class="btn-danger" name="remove">x</button></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2">Excluded Terms</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <ul>
+                            {{#each exclude}}
+                                <label>Add term: </label>
+                                <input type="text" id="exclude_terms" name="exclude_terms"> <br>
+                                <li> {{term}}  <button class="btn-danger" name="remove">x</button></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p>
+                <input type="submit" class="btn-lg" value="Save"></button>
+                <button id="cancel" class="btn-danger btn-lg">Cancel</button>
+            </p>
         </form>
-        <div class="panel-group">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse1">Included Terms</a>
-                    </h4>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse">
-                    <ul>
-                        {{#each include}}
-                            <li>{{term}}  <button class="btn-danger" name="remove">x</button></li>
-                        {{/each}}
-                    </ul>
-                    <form autocomplete="on" role="form" method="get">
-                        <label>Add Term: </label>
-                        <input type="text" id="include_terms"> <br>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="panel-group">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse2">excluded Terms</a>
-                    </h4>
-                </div>
-                <div id="collapse2" class="panel-collapse collapse">
-                    <ul>
-                        {{#each exclude}}
-                            <li> {{term}}  <button class="btn-danger" name="remove">x</button></li>
-                        {{/each}}
-                    </ul>
-                    <form autocomplete="on" role="form" method="get">
-                        <label>add term: </label>
-                        <input type="text" id="exclude_terms"> <br>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <p>
-            <button class="btn-lg" >save</button>
-            <button id="cancel" class="btn-lg">cancel</button>
-        </p>
-
         <p><button class="btn-danger btn-lg">Delete search</button></p>
     </div>
 
     <script  type="text/javascript">
         document.getElementById("backbutton").onclick = function (){
+
             console.log('back')
             location.href = '/edit';
         };
         document.getElementById("cancel").onclick = function (){
             console.log('back')
             location.href = '/edit';
+
         };
     </script>
 </body>
