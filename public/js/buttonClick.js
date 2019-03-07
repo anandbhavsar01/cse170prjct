@@ -3,6 +3,7 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	initEdits();
 })
 
 /*
@@ -34,6 +35,27 @@ function initializePage() {
 	});
 }
 
+function initEdits(){
+	$('include_form').submit(function(e){
+		e.preventDefault();
+
+		console.log('include');
+		var new_term = $('#include_terms').val();
+		//include.push({"term" : new_term});
+
+		console.log(new_term);
+	});
+	$('exclude_form').submit(function(e){
+		e.preventDefault();
+
+		console.log('exclude');
+		var new_term = $('#exclude_terms').val();
+		//exclude.push({"term" : new_term});
+		console.log(new_term);
+
+	});
+};
+
 function test (req, res){
 	console.log("req");
-  }
+}
