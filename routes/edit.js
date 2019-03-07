@@ -1,7 +1,8 @@
 
 var data = require('../categories.json');
-
+//var data = JSON.parse(localStorage.getItem('info'));
 exports.view = function(req, res){
+
     var check = req.query;
     var editData = { name: 'Error', include: [], exclude: ['']};
     for(var i = 0; i < data["categories"].length; i++){

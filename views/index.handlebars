@@ -11,6 +11,7 @@
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="/js/bootstrap.min.js"></script>
 	    <script src="/js/buttonClick.js"></script>
+		<script src="/js/addedit.js"></script>
 		<!-- Google Analytics -->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -24,6 +25,7 @@
 		<!-- End Google Analytics -->
 	</head>
 	<body>
+        window.localStorage.setItem("info", JSON.stringify({{catagories}}));
 
 		<div class="container-fluid">
 			<header class="header">
@@ -43,8 +45,8 @@
 				{{/each}} <br>
 			</div>
 			<footer class="footer">
-				<button class="footerButton" onclick="location.href='/edit'"><img class="center" src="/images/edit.png" height="30px" width="30px" alt="Edit">Edit</button>
-				<button class="footerButton" onclick="location.href='/add'"><img class="center" src="/images/add.png" height="30px" width="30px" alt="Add">Add</button>
+				<button class="editButton" onclick="location.href='/edit'"><img class="center" src="/images/edit.png" height="30px" width="30px" alt="Edit">Edit</button>
+				<button class="addButton" onclick="location.href='/add'"><img class="center" src="/images/add.png" height="30px" width="30px" alt="Add">Add</button>
 				<button class="like">If you like this mode more, press this button</button>
 			</footer>
 		</div>

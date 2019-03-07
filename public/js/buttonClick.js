@@ -10,6 +10,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+
 	$('.selectCategory').click(function(e) {
 		if($(this).attr("class") == "selectCategory"){
 			console.log("Button is selected " + $(this).attr("value"));

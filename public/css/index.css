@@ -116,8 +116,7 @@ button.footerButton{
   border-color: lightseagreen;
   background-color: paleturquoise;
 }
-
-button.footerButtonB{
+button.addButton{
   height: 80px;
   width: 50%;
   display: inline-block;
@@ -128,6 +127,18 @@ button.footerButtonB{
   border-color: lightseagreen;
   background-color: paleturquoise;
 }
+button.editButton{
+  height: 80px;
+  width: 50%;
+  display: inline-block;
+  background-color: white;
+  border-style: solid;
+  font-size: 24px;
+  border-width: 1px;
+  border-color: lightseagreen;
+  background-color: paleturquoise;
+}
+
 
 button.logout{
   height: 50px;
