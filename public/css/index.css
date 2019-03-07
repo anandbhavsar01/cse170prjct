@@ -46,11 +46,11 @@ div.row{
 
 div.rowB{
   font-size: 0px;
-  top: 130px;
+  top: 200px;
   position: absolute;
   overflow-y: scroll;
   width: 100%;
-  height: calc(100% - 180px);
+  height: calc(100% - 250px);
 }
 
 h4{
@@ -96,11 +96,12 @@ html, body {
 
 header{
   width: 100%;
-  height: 120px;
+  height:200px;
   background-color: paleturquoise;
   border-width: 1px;
   border-color: lightseagreen;
   position: fixed;
+  font-size: 0px;
 }
 
 .footer{
@@ -156,7 +157,7 @@ button.editButton{
 
 button.addButtonB{
   height: 80px;
-  width: 49%;
+  width: 50%;
   display: inline-block;
   background-color: white;
   border-style: solid;
