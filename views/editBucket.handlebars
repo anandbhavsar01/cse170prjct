@@ -77,8 +77,11 @@
             <button class="btn-lg" >save</button>
             <button id="cancel" class="btn-lg">cancel</button>
         </p>
+        <form id="del_form" role="form" method="GET" action="/delete">
+            <input class="hidden" value="{{name}}" name="entry">
+            <p><button class="btn-danger btn-lg" form="del_form" type="submit">Delete search</button></p>
+        </form>
 
-        <p><button class="btn-danger btn-lg">Delete search</button></p>
     </div>
 
     <script  type="text/javascript">
