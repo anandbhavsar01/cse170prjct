@@ -1,20 +1,21 @@
 .formCategory{
-  height: 200px;
+  height: calc((100%) / 3 );
   width: calc( (100% / 3));
   background-color: white;
-  border-color: white;
   border-style: solid;
   display: inline-block;
   font-size: 0px;
+  border-width: 1px;
+  border-color: black;
 }
 
 .selectCategory{
-  height: 200px;
+  height: 100%;
   width: 100%;
   background-color: paleturquoise;
   border-style: solid;
   display: inline-block;
-  font-size: 12px;
+  font-size: 24px;
   color: darkgreen;
   border-color: lightseagreen;
 }
@@ -23,25 +24,33 @@
   body{
     margin: 0px;
   }
-  
-  div.row{
-    font-size: 0px;
-    top: 50px;
-      left:0px;
-      right:0px;
-      bottom:0px; 
-  }
-  
-  h4{
-    text-align: center;
-    margin: auto;
-    padding: 5px;
-  }
-  
-  input.selectCategory:focus {
-    background:rgba(11, 160, 187, 0.699);
-    color: rgb(24, 138, 132);
-  }  
+
+body{
+  margin: 0px;
+}
+
+div.row{
+  font-size: 0px;
+  top: 120px;
+  left:15px;
+  position: absolute;
+  overflow-y: scroll;
+  width: 100%;
+  height: calc(100% - 250px);
+}
+
+h4{
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  background-color: paleturquoise;
+  width: auto;
+  height: 70px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
   
   html, body {
     max-width: 100%;
