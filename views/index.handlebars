@@ -1,6 +1,20 @@
 <html>
 	<head>
-		<title>The App</title>
+	<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='190618733-1',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+		<title>Pinpoint</title>
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="../css/bootstrap-theme.css" rel="stylesheet">
@@ -29,9 +43,9 @@
 		<div class="container-fluid">
 			<header class="header">
 				<form class="headerForm" role="form" method="GET" action="/makeQuery">
-					<input class="entry" type="text" id="entry" name="entry" placeholder="Regular basic search..."/> 
+					<input class="entry" type="text" id="entry" name="entry" placeholder="Regular basic search..."/> 	
+					<button class="searchButton"><img src="/images/search.png" height="40px" width="40px"alt="Logout"></button>				
 				</form>
-				<button class="logout" onclick="location.href='/'"><img src="/images/logout.png" height="40px" width="40px"alt="Logout"></button>
 				<h4>
 					Or, make a much better search below...
 				</h4>
@@ -46,8 +60,9 @@
 			<footer class="footer">
 				<button class="editButton" onclick="location.href='/edit'"><img class="center" src="/images/edit.png" height="30px" width="30px" alt="Edit">Edit</button>
 				<button class="addButton" onclick="location.href='/add'"><img class="center" src="/images/add.png" height="30px" width="30px" alt="Add">Add</button>
-				<button class="like">If you like this mode more, press this button</button>
+				<button class="logout" onclick="location.href='/'">Logout</button>
 			</footer>
+			
 		</div>
 	</body>
 	

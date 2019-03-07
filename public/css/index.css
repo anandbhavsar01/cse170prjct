@@ -44,6 +44,15 @@ div.row{
   height: calc(100% - 250px);
 }
 
+div.rowB{
+  font-size: 0px;
+  top: 130px;
+  position: absolute;
+  overflow-y: scroll;
+  width: 100%;
+  height: calc(100% - 180px);
+}
+
 h4{
   text-align: center;
   margin: auto;
@@ -103,6 +112,14 @@ header{
   bottom: 0;
 }
 
+.footerB{
+  height: 50px;
+  width: 100%;
+  font-size: 0px;  
+  display: inline-block; 
+  position: absolute; 
+  bottom: 0;
+}
 button.footerButton{
   height: 80px;
   width: 50%;
@@ -137,16 +154,48 @@ button.editButton{
   background-color: paleturquoise;
 }
 
-
-button.logout{
-  height: 50px;
-  width: 20%;
-  font-size: 14px;
+button.addButtonB{
+  height: 80px;
+  width: 49%;
+  display: inline-block;
   background-color: white;
   border-style: solid;
+  font-size: 24px;
   border-width: 1px;
   border-color: lightseagreen;
   background-color: paleturquoise;
+}
+button.editButtonB{
+  height: 80px;
+  width: 49%;
+  display: inline-block;
+  background-color: white;
+  border-style: solid;
+  font-size: 24px;
+  border-width: 1px;
+  border-color: lightseagreen;
+  background-color: paleturquoise;
+}
+
+button.logout{
+  height: 50px;
+  width: 100%;
+  font-size: 14px;
+  background-color: darkblue;
+  border-style: solid;
+  border-width: 1px;
+  color: white;
+  border-color: black;
+}
+button.searchButton{
+  height: 50px;
+  width: 20%;
+  font-size: 14px;
+  background-color: paleturquoise;
+  border-style: solid;
+  border-width: 1px;
+  color: white;
+  border-color: lightseagreen;
 }
 
 button.like{
