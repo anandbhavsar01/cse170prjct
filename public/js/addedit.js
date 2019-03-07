@@ -20,5 +20,16 @@ function initializePage() {
 		ga('create','UA-134940364-2','auto')
     	ga('send','event','addButton','click');
 	});
+	$('.editButtonB').click(function(e){
+		e.preventDefault();
+		ga('create','UA-134940364-2','auto')
+    	ga('send','event','editButton','click');
+	});
+
+	$('.addButtonB').click(function(e){
+		e.preventDefault();
+		ga('create','UA-134940364-2','auto')
+    	ga('send','event','addButton','click');
+	});
 }
 
