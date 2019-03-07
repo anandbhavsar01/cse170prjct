@@ -53,6 +53,7 @@ app.get('/editBucket', editBucket.view);
 app.get('/refine', refinedSearch.view);
 app.get('/add', add.view);
 app.get('/addCategory', add.addCategory);
+app.get('/makeEdit', editBucket.makeEdit);
 app.get('/delete', editBucket.delete);
 // app.get('/getResult', result.getResult);
 // Example route

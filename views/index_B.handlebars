@@ -28,28 +28,28 @@
 
 		<div class="container-fluid">
 			<header class="header">
-				<form role="form" method="GET" action="/makeQuery">
-					<input class="entry" type="text" id="entry" name="entry" placeholder="Regular basic search..."/> <br>
+				<form class="headerForm" role="form" method="GET" action="/makeQuery">
+					<input class="entry" type="text" id="entry" name="entry" placeholder="Regular basic search..."/> 	
+					<button class="searchButton"><img src="/images/search.png" height="40px" width="40px"alt="Logout"></button>				
 				</form>
+{{!-- 				
 				<h4>
 					Or, make a much better search below...
-				</h4>
+				</h4> --}}
+				<button class="editButtonB" onclick="location.href='/edit'"><img class="center" src="/images/edit.png" height="30px" width="30px" alt="Edit">Edit</button>
+				<button class="addButtonB" onclick="location.href='/add'"><img class="center" src="/images/add.png" height="30px" width="30px" alt="Add">Add</button>
 			</header>
-			<div class="footer">
-				<button class="editButton" onclick="location.href='/edit'">Edit</button>
-				<button class="addButton" onclick="location.href='/add'">Add</button>
-			</div>
-			<div class="row">
+			<div class="rowB">
 				{{#each categories}}
 					<form class="formCategory" role="form" method="GET" action="/refine">
 						<input class="selectCategory" id="{{name}}" name="entry" onclick="/refine" type="submit" value="{{name}}"/>
 					</form>
 				{{/each}} <br>
 			</div>
-			<footer class="footer">
+			<footer class="footerB">
 				<button class="logout" onclick="location.href='/'">Logout</button>
-				<button class="logout">If you like this mode more, press this button</button>
 			</footer>
+			
 		</div>
 	</body>
 	
