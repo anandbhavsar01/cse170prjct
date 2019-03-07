@@ -28,14 +28,17 @@
 
 		<div class="container-fluid">
 			<header class="header">
-				<form class="headerForm" role="form" method="GET" action="/makeQuery">
-					<input class="entry" type="text" id="entry" name="entry" placeholder="Regular basic search..."/> 
-					<button class="logout" onclick="location.href='/'"><img src="/images/logout.png" height="40px" width="40px"alt="Logout"></button>
+				<form role="form" method="GET" action="/makeQuery">
+					<input class="entry" type="text" id="entry" name="entry" placeholder="Regular basic search..."/> <br>
 				</form>
 				<h4>
 					Or, make a much better search below...
 				</h4>
 			</header>
+			<div class="footer">
+				<button class="editButton" onclick="location.href='/edit'">Edit</button>
+				<button class="addButton" onclick="location.href='/add'">Add</button>
+			</div>
 			<div class="row">
 				{{#each categories}}
 					<form class="formCategory" role="form" method="GET" action="/refine">
@@ -44,9 +47,8 @@
 				{{/each}} <br>
 			</div>
 			<footer class="footer">
-				<button class="editButton" onclick="location.href='/edit'"><img class="center" src="/images/edit.png" height="30px" width="30px" alt="Edit">Edit</button>
-				<button class="addButton" onclick="location.href='/add'"><img class="center" src="/images/add.png" height="30px" width="30px" alt="Add">Add</button>
-				<button class="like">If you like this mode more, press this button</button>
+				<button class="logout" onclick="location.href='/'">Logout</button>
+				<button class="logout">If you like this mode more, press this button</button>
 			</footer>
 		</div>
 	</body>

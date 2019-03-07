@@ -13,6 +13,8 @@ var index = require('./routes/index');
 var search = require('./routes/search');
 var searchEngine = require('./public/js/searchEngine');
 var editBucket = require('./routes/edit');
+var refinedSearch = require('./routes/refinedSearch');
+var add = require('./routes/add');
 
 // var result = require ('./routes/getResult');
 
@@ -43,10 +45,14 @@ if ('development' == app.get('env')) {
 
 app.get('/', login.view);
 app.get('/index', index.view);
+app.get('/index_B', index.viewAlt);
 app.get('/search', search.postQuery);
 app.get('/makeQuery', searchEngine.makeQuery);
 app.get('/edit', editBucket.editView);
 app.get('/editBucket', editBucket.view);
+app.get('/refine', refinedSearch.view);
+app.get('/add', add.view);
+app.get('/addCategory', add.addCategory);
 // app.get('/getResult', result.getResult);
 // Example route
 // app.get('/users', user.list);
