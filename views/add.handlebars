@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Add a new Bucket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/add.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/buttonClick.js"></script>
+    </head>
+<body>
+
+    <div class="container">
+        <button id="backbutton">Back</button>
+
+        <header class="header">
+            <h1>Add a new Bucket</h1>
+        </header>
+
+        <form autocomplete="off" role="form" method="get" action="/addCategory">
+            <label>Name: </label>
+            <input type="text" id="bucketName" name="bucketName" value=" "> <br>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1">Add terms that must be in your searches:</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <ul>
+                            {{#each include}}
+                                <li>{{term}}  <button class="btn-danger" name="remove">x</button></li>
+                            {{/each}}
+                        </ul>
+                        <label>Add Term: </label>
+                        <input type="text" id="include_terms" name="include_terms"> <br>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2">Add terms to not include in your searches:</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <ul>
+                            {{#each exclude}}
+                                <li> {{term}}  <button class="btn-danger" name="remove">x</button></li>
+                            {{/each}}
+                        </ul>
+                        <label>Add term: </label>
+                        <input type="text" id="exclude_terms" name="exclude_terms"> <br>
+                    </div>
+                </div>
+            </div>
+            <p>
+                <input type="submit" class="btn-lg" value="Save"/>
+                <button id="cancel" class="btn-danger btn-lg">Cancel</button>
+            </p>
+        </form>
+    </div>
+
+    <script  type="text/javascript">
+        document.getElementById("backbutton").onclick = function (){
+            console.log('back')
+            location.href = '/index';
+        };
+        document.getElementById("cancel").onclick = function (){
+            console.log('back')
+            location.href = '/index';
+        };
+    </script>
+</body>

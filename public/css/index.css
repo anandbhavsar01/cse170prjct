@@ -1,10 +1,28 @@
-button.selectCategory{
-  height: 200px;
+.formCategory{
+  height: calc((100%) / 3 );
   width: calc( (100% / 3));
+  background-color: paleturquoise;
+  border-style: solid;
+  display: inline-block;
+  font-size: 0px;
+  border-width: 1px;
+  border-color: lightseagreen;
+}
+
+.headerForm{
+  font-size: 0px;
+  margin: 0px;
+}
+
+.selectCategory{
+  height: 100%;
+  width: 100%;
   background-color: white;
   border-style: solid;
   display: inline-block;
-  font-size: 12px;
+  font-size: 24px;
+  color: darkgreen;
+  border-color: lightseagreen;
 }
 
 body{
@@ -13,20 +31,29 @@ body{
 
 div.row{
   font-size: 0px;
-  top: 50px;
-    left:0px;
-    right:0px;
-    bottom:0px; 
+  top: 120px;
+  left:15px;
+  position: absolute;
+  overflow-y: scroll;
+  width: 100%;
+  height: calc(100% - 250px);
 }
 
 h4{
   text-align: center;
   margin: auto;
   padding: 5px;
+  background-color: paleturquoise;
+  width: auto;
+  height: 70px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button.selectCategory:focus {
-    background:#fcfcfc;
+.selectCategory:focus {
+    background:rgba(11, 160, 187, 0.699);
+    color: rgb(24, 138, 132);
 } 
 /*
 button.selected{
@@ -39,10 +66,14 @@ button.selected{
 }*/
 
 input.entry{
-    height: 50px;
-    width: 100%;
-    padding: 10px;
-    margin: auto;
+  height: 50px;
+  width: 80%;
+  padding: 10px;
+  margin: auto; 
+  border-width: 1px;
+  border-color: lightseagreen;
+  float: left;
+  font-size: 14px;
 }
 
 .one-edge-shadow {
@@ -59,30 +90,70 @@ html, body {
 header{
   width: 100%;
   height: 120px;
+  background-color: paleturquoise;
+  border-width: 1px;
+  border-color: lightseagreen;
+  position: fixed;
 }
 
-footer.footer{
+.footer{
+  height: 130px;
   width: 100%;
   font-size: 0px;  
   display: inline-block; 
+  position: absolute; 
+  bottom: 0;
 }
 
-form{
-  width: 100%;
-}
 button.footerButton{
-  height: 100px;
+  height: 80px;
   width: 50%;
   display: inline-block;
   background-color: white;
   border-style: solid;
-  font-size: 14px;
+  font-size: 24px;
+  border-width: 1px;
+  border-color: lightseagreen;
+  background-color: paleturquoise;
+}
+
+button.footerButtonB{
+  height: 80px;
+  width: 50%;
+  display: inline-block;
+  background-color: white;
+  border-style: solid;
+  font-size: 24px;
+  border-width: 1px;
+  border-color: lightseagreen;
+  background-color: paleturquoise;
 }
 
 button.logout{
+  height: 50px;
+  width: 20%;
+  font-size: 14px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightseagreen;
+  background-color: paleturquoise;
+}
+
+button.like{
   height: 50px;
   width: 100%;
   font-size: 14px;
   background-color: white;
   border-style: solid;
+  border-width: 1px;
+  border-color: lightseagreen;
+  background-color: paleturquoise;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
 }

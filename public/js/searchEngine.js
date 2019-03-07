@@ -1,8 +1,8 @@
 var request = require("request");
 var data = require("../../data.json");
 
-var subscriptionKey = '819db57334bf4af78e03a0e7f718bcbf';
-var customConfigId = '49dec242-0a3f-4155-9871-6a918809672a';
+var subscriptionKey = '9850ad22b10443f78076d3ba778bad53';
+var customConfigId = 'dc02bf21-37b9-4779-8810-2d43cb4d0c05';
 var searchTerm = 'microsoft';
 
 var info = {
@@ -15,11 +15,13 @@ var info = {
 }
 
 exports.makeQuery = function(req, response){
-    var space = req.query.entry.indexOf(" ");
-    var mod = req.query.entry.substring(0, space);
-    var rest = req.query.entry.substring(space);
-    var improve = "\"" + mod + "\"";
-    searchTerm = improve + rest;
+    var searchTerm = "";
+    console.log(req.query.entry);
+    if( Array.isArray(req.query.entry)){
+        for(var i = 0; i < req.query.entry.length; i++){
+            searchTerm = searchTerm + "\"" +  req.query.entry[i] + "\" ";
+        }
+    }
     info = {
         url: 'https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/search?' + 
             'q=' + searchTerm + "&" +
@@ -32,11 +34,15 @@ exports.makeQuery = function(req, response){
     request(info, function(error, response, body){
         var searchResponse = JSON.parse(body);
         data.pages = [];
-        for(var i = 0; i < searchResponse.webPages.value.length; ++i){
-            var webPage = searchResponse.webPages.value[i];
-            data.pages.push(webPage);
+        console.log(response);
+        console.log(searchResponse);
+        if( searchResponse.webPages){
+            for(var i = 0; i < searchResponse.webPages.value.length; ++i){
+                var webPage = searchResponse.webPages.value[i];
+                data.pages.push(webPage);
+            }
+            outResponse.render('results', data);
         }
-        outResponse.render('resultPage', data);
     });
 }
 
