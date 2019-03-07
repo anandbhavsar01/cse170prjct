@@ -1,22 +1,28 @@
 body {
-    background-image: url(../images/two750.jpg);
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center; 
     
 }
 .title{
     text-align: center;
     font-family: "Dekers_Bold", Arial, sans-serif;
 }
+
+h1{
+    color: white;
+}
 h2 {
     text-align: center;
     font-family: 'Exo-Regular', Arial, sans-serif;
-    background-color: darkgreen;
+    background-color: rgb(0, 0, 0);
     padding: 5px;
     color: white;
 }
 h3 {
     text-align: center;
     font-family: 'Exo-Regular', Arial, sans-serif;
-    background-color: darkgreen;
+    background-color: rgb(0, 0, 0);
     padding: 5px;
     color: white;
 }
@@ -56,9 +62,10 @@ h3 {
     height: 50px;
     display: table;
     margin: auto;
-    background-color: yellow;
+    background-color: rgb(196, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 25px;
-    color: darkgreen;
+    color: rgb(255, 255, 255);
     font-family: 'Exo-Regular', Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
@@ -70,7 +77,7 @@ h3 {
   margin: 8px 0;
   display: table;
     margin: auto;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(80, 80, 80);
   border-radius: 4px;
   box-sizing: border-box;
 }
