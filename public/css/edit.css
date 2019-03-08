@@ -1,29 +1,30 @@
 .formCategory{
-  height: calc((100%) / 3 );
+  height: calc((100%/3));
   width: calc( (100% / 3));
-  background-color: white;
+  background-color: red;
   border-style: solid;
   display: inline-block;
   font-size: 0px;
   border-width: 1px;
-  border-color: black;
+  border-color: darkred;
+  word-wrap: break-word;
 }
 
 .selectCategory{
+  text-align: center;
   height: 100%;
   width: 100%;
-  background-color: paleturquoise;
+  background-color: white;
   border-style: solid;
   display: inline-block;
   font-size: 24px;
-  color: darkgreen;
-  border-color: lightseagreen;
+  color: rgb(180, 0, 0);
+  border-color: darkred;
+  overflow-wrap: break-word;
+  border-width: 1px;
+  padding: 1px;
+  font-weight: bold;
 }
-
-  
-  body{
-    margin: 0px;
-  }
 
 body{
   margin: 0px;
@@ -31,49 +32,55 @@ body{
 
 div.row{
   font-size: 0px;
-  top: 120px;
+  top: 70px;
   left:15px;
   position: absolute;
   overflow-y: scroll;
   width: 100%;
-  height: calc(100% - 250px);
+  height: calc(100% - 70px);
 }
 
 h4{
   text-align: center;
   margin: auto;
   padding: 5px;
-  background-color: paleturquoise;
-  width: auto;
+  background-color: red;
+  width: 80%;
   height: 70px;
   display:flex;
   align-items: center;
   justify-content: center;
+  border-width: 1px;
+  border-color: darkred;
+  color: white;
 }
 
   
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
   
-  header{
-    width: 100%;
-    height: 120px;
-  }
-  
-  footer.footer{
-    width: 100%;
-    font-size: 0px;  
-    display: inline-block; 
-  }
-  
-  
-  .editFooterButton{
-    height: 100px;
-    width: 100%;
-    display: inline-block;
-    background-color: white;
-    border-style: solid;
-    font-size: 14px;
-  }
+header{
+  width: 100%;
+  height: 70px;
+}
+
+footer.footer{
+  width: 100%;
+  font-size: 0px;  
+  display: inline-block; 
+}
+
+
+.editFooterButton{
+  height: 70px;
+  width: 20%;
+  float: left;
+  color: white;
+  border-style: solid;
+  font-size: 24px;
+  border-width: 1px;
+  border-color: darkred;
+  background-color: red;
+}
