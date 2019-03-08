@@ -12,15 +12,49 @@ hr {
     padding: 0;
 }
 
+a{
+    color: darkred;
+}
+
 button{
     display: inline-block;
     vertical-align: middle;
 }
 
+button.backButton{
+    height: 70px;
+    width: 20%;
+    float: left;
+    color: white;
+    border-style: solid;
+    font-size: 24px;
+    border-width: 1px;
+    border-color: darkred;
+    background-color: red;
+}
+
 h3{
     display: inline-block;
-    vertical-align: middle;
-    margin-left: 25%;
+    margin: auto;
+    width: 80%;
+    background-color: lightgray;
+    height: 70px;
+}
+
+.headerText{
+    margin: auto; 
+    height: 70px;
+    width: 80%;
+    background-color: lightgray;
+    border: 0px;
+    font-size: 24px;
+
+}
+
+header{
+    background-color: lightgray;
+    height: 70px;
+    margin: auto;
 }
 
 .linkName{
