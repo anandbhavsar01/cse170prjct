@@ -20,18 +20,22 @@
 
 </head>
 <body>
-    <div class="container">
-        <button id="backbutton"><img src="../images/back.png"></button>
-        <h3> Results </h1>
-        {{#each pages}}
-            <hr>
-            <div class="result"> 
-                <a class = "linkName" href={{url}}>{{name}}</a>
-                <a href={{url}}>{{displayURL}}</a>
-                <p>{{snippet}}</p>
+    <div class="container-fluid">
+        <header>
+            <button class="backButton" id="backbutton">Back</button>
+            <button class="headerText"> Results </button>
+        </header>
+        <div class="container">
+            {{#each pages}}
+                <hr>
+                <div class="result"> 
+                    <a class = "linkName" href={{url}}>{{name}}</a>
+                    <a href={{url}}>{{displayURL}}</a>
+                    <p>{{snippet}}</p>
 
-            </div>
-        {{/each}}
+                </div>
+            {{/each}}
+        </div>
     </div>
     <script >
         document.getElementById("backbutton").onclick = function (){
