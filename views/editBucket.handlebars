@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>editBucket</title>
+        <title>Edit Pin</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <link href="../css/bootstrap-theme.css" rel="stylesheet">
@@ -32,10 +32,11 @@
                     </div>
                     <div id="collapse1" class="panel-collapse collapse">
                         <ul>
+                            <label>Add a Term to Include: </label>
+                            <input type="text" id="include_terms" name="include_terms"> 
+                            <button type="button" class="btn-danger" id="add">+</button> <br>
                             {{#each include}}
-                                <label>Add Term: </label>
-                                <input type="text" id="include_terms" name="include_terms"> <br>
-                                <li>{{term}}  <button class="btn-danger" name="remove">x</button></li>
+                            <li>{{term}}<button type="button" class="btn-danger" id="remove">x</button></li>
                             {{/each}}
                         </ul>
                     </div>
@@ -50,10 +51,11 @@
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">
                         <ul>
+                            <label>Add a Term to Exclude: </label>
+                            <input type="text" id="exclude_terms" name="exclude_terms"> 
+                            <button type="button" class="btn-danger" id="add">+</button> <br>
                             {{#each exclude}}
-                                <label>Add term: </label>
-                                <input type="text" id="exclude_terms" name="exclude_terms"> <br>
-                                <li> {{term}}  <button class="btn-danger" name="remove">x</button></li>
+                            <li> {{term}} <button type="button" class="btn-danger" id="remove">x</button></li>
                             {{/each}}
                         </ul>
                     </div>
@@ -81,5 +83,7 @@
             location.href = '/edit';
 
         };
+    </script>
+    <script src="../js/editTerm.js">
     </script>
 </body>

@@ -55,6 +55,8 @@ app.get('/add', add.view);
 app.get('/addCategory', add.addCategory);
 app.get('/makeEdit', editBucket.makeEdit);
 app.get('/delete', editBucket.delete);
+//app.get('/addTerm', editBucket.addTerm);
+//app.get('/removeTerm', editBucket.removeTerm);
 // app.get('/getResult', result.getResult);
 // Example route
 // app.get('/users', user.list);
