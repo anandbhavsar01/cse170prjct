@@ -44,7 +44,10 @@ exports.makeQuery = function(req, response){
                             var webPage = searchResponse.webPages.value[i];
                             data.pages.push(webPage);
                         }
-                        outResponse.render('results', data);
+                        data["filter"] = req.query.filter;
+                        data["previous"] = req.query.entry;
+                        console.log(data);
+                        outResponse.render('refinedSearch', data);
                     }
                 });
             }
@@ -66,7 +69,10 @@ exports.makeQuery = function(req, response){
                         var webPage = searchResponse.webPages.value[i];
                         data.pages.push(webPage);
                     }
-                    outResponse.render('results', data);
+                    data["filter"] = req.query.filter;
+                    data["previous"] = req.query.entry;
+                        console.log(data);
+                    outResponse.render('refinedSearch', data);
                 }
             });
         }

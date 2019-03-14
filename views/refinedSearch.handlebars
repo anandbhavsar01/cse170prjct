@@ -19,11 +19,20 @@
                     Searching all {{filter}}:
                 </label> <br>
                 <input class="entry" id="filter" name="filter" type="hidden" value={{filter}} />
-                <input class="entry" id="entry" name="entry" type="text"/>
+                <input class="entry" id="entry" name="entry" type="text" value="{{previous}}"/>
 
                 <p><button class="searchButton"><img src="/images/search.png" height="40px" width="40px"alt="Logout"></button></p>
             </form>
-
+            <div class="container">
+                {{#each pages}}
+                    <hr>
+                    <div class="result"> 
+                        <a class = "linkName" href={{url}}>{{name}}</a>
+                        <a href={{url}}>{{displayURL}}</a>
+                        <p>{{snippet}}</p>
+                    </div>
+                {{/each}}
+            </div>
         </div>
     </body>
 </html>
