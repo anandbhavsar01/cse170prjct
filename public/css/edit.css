@@ -84,3 +84,50 @@ footer.footer{
   border-color: darkred;
   background-color: red;
 }
+
+.editLink{
+  color: white !important;
+  background-color: red;
+}
+
+.panel-title{
+  background-color: red !important;
+  margin: 0px !important;
+  width: 100% !important;
+}
+
+.panel-heading{
+  background-color: red !important;
+  border-color: darkred !important;
+  padding: 0px !important;
+  width: 100% !important;
+}
+
+.panel-group{
+  background-color: white !important;
+}
+
+.panel-default{
+  background-color: white !important;
+}
+
+.btn-danger{
+  background-color: red !important;
+  color: white;
+  border-color: red !important;
+  background-image: none !important;
+  
+  border-radius: 0px;
+  border-width: 0px;
+}
+
+.btn-lg{
+  border-radius: 0px;
+  border-width: 0px;
+  background-color: lightgray;
+  margin: 10px;
+}
+
+label{
+  margin: 10px;
+}
