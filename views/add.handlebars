@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <link href="../css/bootstrap-theme.css" rel="stylesheet">
         <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/edit.css" rel="stylesheet">
 
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="/js/bootstrap.min.js"></script>
@@ -13,10 +14,10 @@
 <body>
 
     <div class="container">
-        <button id="backbutton">Back</button>
 
         <header class="header">
-            <h1>Add a new Bucket</h1>
+            <button class="editFooterButton" id="backbutton">Back</button>
+            <h4>Add a new Bucket</h4>
         </header>
 
         <form autocomplete="off" role="form" method="get" action="/addCategory">
@@ -26,7 +27,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse1">Add terms that must be in your searches:</a>
+                            <a class="editLink" data-toggle="collapse" href="#collapse1">Add terms that must be in your searches:</a>
                         </h4>
                     </div>
                     <div id="collapse1" class="panel-collapse collapse">
@@ -44,7 +45,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse2">Add terms to not include in your searches:</a>
+                            <a class="editLink" data-toggle="collapse" href="#collapse2">Add terms to not include in your searches:</a>
                         </h4>
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">

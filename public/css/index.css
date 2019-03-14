@@ -71,7 +71,7 @@ h4{
 
 .selectCategory:focus {
     background:rgba(187, 11, 11, 0.699);
-    color: rgb(109, 0, 0);
+    color: rgb(255, 255, 255);
 } 
 
 input.entry{
@@ -98,7 +98,7 @@ html, body {
 
 header{
   width: 100%;
-  height:200px;
+  height:120px;
   background-color: red;
   border-width: 1px;
   border-color: darkred;
@@ -224,6 +224,10 @@ button.backButton{
   background-color: red;
 }
 
+input[type=submit] {
+  -webkit-border-radius:0px;
+  border-radius: 0px;
+}
 .center {
   display: block;
   margin-left: auto;
