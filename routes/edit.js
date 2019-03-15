@@ -5,12 +5,10 @@ exports.view = function(req, res){
     var check = req.query;
     var editData = { name: 'Error', include: [], exclude: ['']};
     for(var i = 0; i < data["categories"].length; i++){
-        console.log(data["categories"][i]);
         if(data["categories"][i].name == check.entry){
             editData = data["categories"][i];
         }
     }
-    console.log(editData);
     res.render('editBucket', editData);
 };
 
@@ -19,26 +17,40 @@ exports.editView = function(req, res){
 }
 
 exports.makeEdit = function(req, res){
+    var removeTerms = req.query.submitClicked.split(" ");
     if(req.query.bucketName != undefined){
         var oldname = req.query.oldentry;
         var name = req.query.bucketName;
         for(var i = 0; i < data["categories"].length; i++){
             if(oldname.localeCompare(data["categories"][i].name) == 0){
                 var include = data["categories"][i]["include"];
+                for(var j = 0; j < removeTerms.length; j++){
+                    for(var k = 0; k < include.length; k++) {
+                        if(include[k]["term"].localeCompare(removeTerms[j]) == 0){
+                            include.splice(k, 1);
+                        }
+                    }
+                }
+
                 var exclude = data["categories"][i]["exclude"];
+                for(var j = 0; j < removeTerms.length; j++){
+                    for(var k = 0; k < exclude.length; k++) {
+                        if(exclude[k]["term"].localeCompare(removeTerms[j]) == 0){
+                            exclude.splice(k, 1);
+                        }
+                    }
+                }
+                var newinclude = req.query.include_terms;
                 delete data["categories"][i];
                 var deleted = data["categories"].splice(i,1);
-                var newinclude = req.query.include_terms;
                 if(newinclude != undefined){
                     if(Array.isArray(newinclude)){
                         for(var j = 0; j < newinclude.length; j++){
-                            if(newinclude[i].length > 0){
-                                include.push({"term" : newinclude[j]});
-                            }
+                            include.push({"term" : newinclude[j]});
                         }
                     } else {
                         if(newinclude.length > 0){
-                            include.push({"term": newinclude});
+                            include.push({"term" : newinclude});
                         }
                     }
                 }
@@ -46,13 +58,11 @@ exports.makeEdit = function(req, res){
                 if(newexclude != undefined){
                     if(Array.isArray(newexclude)){
                         for(var j = 0; j < newexclude.length; j++){
-                            if(newexclude[i].length > 0){
-                                exclude.push({"term" : newexclude[j]});
-                            }
+                            exclude.push({"term" : newexclude[j]});
                         }
                     } else {
-                        if(newexclude.length > 0){
-                            exclude.push({"term": newexclude});
+                        if(newinclude.length > 0){
+                            exclude.push({"term" : newexclude});
                         }
                     }
                 }
@@ -79,28 +89,3 @@ exports.delete = function(req, res){
     }
     res.render('index', data);
 };
-
-/*
-exports.removeTerm = function(req, res){
-    var oldname = window.document.getElementById("oldentry");
-    console.log(oldname);   
-    for(var i = 0; i < data["categories"].length; i++){
-        if(oldname.localeCompare(data["categories"][i].name) == 0){
-            console.log(data["categories"][i].name);
-            break;
-        }
-    }
-    res.render('editBucket', data);
-}
-
-exports.addTerm = function(req, res){
-    var oldname = window.document.getElementById("oldentry");
-    console.log(oldname);
-    for(var i = 0; i < data["categories"].length; i++){
-        if(oldname.localeCompare(data["categories"][i].name) == 0){
-            console.log(data["categories"][i].name);
-            break;
-        }
-    }
-    res.render('editBucket', data);
-}*/
