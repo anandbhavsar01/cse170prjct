@@ -8,15 +8,11 @@ exports.addCategory = function(req, res){
     if(req.query.bucketName != undefined && req.query.bucketName != ""){
         var name = req.query.bucketName;
         var exists = false;
-        console.log(categories["categories"].length);
         for(var i = 0; i < categories["categories"].length; i++){
-            console.log(name);
-            console.log(categories["categories"][i].name);
             if(name.localeCompare(categories["categories"][i].name) == 0){
                 exists = true;
             }
         }
-        console.log(exists);
         if(exists == false){
             var newinclude = req.query.include_terms;
             var include = [];

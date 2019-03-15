@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>editBucket</title>
+        <title>Edit Pin</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <link href="../css/bootstrap-theme.css" rel="stylesheet">
@@ -9,17 +9,25 @@
 
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/buttonClick.js"></script>
     </head>
 <body>
-
-    <div class="container">
+    <script type="text/javascript">
+        function onSubmit(button){
+            console.log(button.value);
+            console.log(button.form.submitClicked.value);
+            button.form.submitClicked.value = button.form.submitClicked.value + " " + button.value;
+            console.log(button.form.submitClicked.value);
+            button.innerHTML = 'o';
+        }
+    </script>
+    <div class="container-fluid">
         <header class="header">
             <button  class="editFooterButton" id="backbutton">Back</button>
             <h4>Edit the Bucket</h4>
         </header>
 
         <form autocomplete="off" role="form" method="get" action="/makeEdit">
+            <input type="hidden" name="submitClicked" value="">
             <label>Rename: </label>
             <input type="hidden" id="oldentry" name="oldentry" value="{{name}}">
             <input type="text" id="bucketName" name="bucketName" value="{{name}}"> <br>
@@ -32,10 +40,10 @@
                     </div>
                     <div id="collapse1" class="panel-collapse collapse">
                         <ul>
+                            <label>Add New Terms in this Line: </label>
+                            <input type="text" id="include_terms" name="include_terms"> <br>
                             {{#each include}}
-                                <label>Add Term: </label>
-                                <input type="text" id="include_terms" name="include_terms"> <br>
-                                <li>{{term}}  <button class="btn-danger" name="remove">x</button></li>
+                            <li>{{term}}<button type="button" class="btn-danger" id="{{term}}" value="{{term}}" onclick="onSubmit(this);">x</button></li>
                             {{/each}}
                         </ul>
                     </div>
@@ -50,10 +58,10 @@
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">
                         <ul>
+                            <label>Add New Terms in this Line: </label>
+                            <input type="text" id="exclude_terms" name="exclude_terms"> <br>
                             {{#each exclude}}
-                                <label>Add term: </label>
-                                <input type="text" id="exclude_terms" name="exclude_terms"> <br>
-                                <li> {{term}}  <button class="btn-danger" name="remove">x</button></li>
+                            <li> {{term}} <button type="button" class="btn-danger" id="{{term}}" value="{{term}}" onclick="onSubmit(this);">x</button></li>
                             {{/each}}
                         </ul>
                     </div>
@@ -61,7 +69,7 @@
             </div>
             <p>
                 <input type="submit" class="btn-lg" value="Save"></button>
-                <button id="cancel" class="btn-danger btn-lg">Cancel</button>
+                <button type="button" id="cancel" class="btn-danger btn-lg">Cancel</button>
             </p>
         </form>
         <form id="del_form" role="form" method="GET" action="/delete">
